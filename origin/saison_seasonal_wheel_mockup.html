@@ -1,0 +1,335 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --dur: 700ms;
+  }
+
+  .saison-root {
+    font-family: 'DM Sans', sans-serif;
+    transition: background var(--dur) ease, color var(--dur) ease;
+    min-height: 580px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Season tokens */
+  .saison-root[data-season="winter"] {
+    --bg: #EEF0F2; --bg2: #E2E5E9; --accent: #7A8FA6; --text: #2E3540;
+    --muted: #7A8899; --highlight: #A0B4C8; --card-border: #C8D4DE;
+    --warm: #4A5A6A;
+  }
+  .saison-root[data-season="spring"] {
+    --bg: #EFF2EA; --bg2: #E3E9DB; --accent: #6A8A58; --text: #252E20;
+    --muted: #6A7A60; --highlight: #A8C890; --card-border: #C0D4AC;
+    --warm: #4A6A38;
+  }
+  .saison-root[data-season="summer"] {
+    --bg: #F4F0E6; --bg2: #EBE4D4; --accent: #B87858; --text: #342820;
+    --muted: #7A6450; --highlight: #D8A870; --card-border: #D4C0A0;
+    --warm: #98582A;
+  }
+  .saison-root[data-season="autumn"] {
+    --bg: #F0EAE2; --bg2: #E6DDD2; --accent: #9A5E38; --text: #2E2018;
+    --muted: #7A6050; --highlight: #C09060; --card-border: #C8B090;
+    --warm: #7A3E18;
+  }
+
+  .saison-root { background: var(--bg); color: var(--text); }
+
+  /* Header band */
+  .s-header {
+    padding: 1.5rem 1.5rem 0;
+    display: flex; align-items: baseline; gap: 1rem;
+    border-bottom: 0.5px solid var(--card-border);
+    padding-bottom: 1rem;
+    transition: border-color var(--dur) ease;
+  }
+  .s-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px; letter-spacing: -0.02em;
+    color: var(--text); transition: color var(--dur) ease;
+  }
+  .s-logo em { font-style: italic; color: var(--accent); transition: color var(--dur) ease; }
+  .s-tagline {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); transition: color var(--dur) ease;
+  }
+
+  /* Wheel section */
+  .s-wheel-wrap {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 1.5rem 1rem 0.5rem;
+    position: relative;
+  }
+
+  .s-season-label {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); transition: color var(--dur) ease;
+    margin-bottom: 0.75rem;
+  }
+
+  .wheel-outer {
+    position: relative; width: 240px; height: 240px;
+  }
+
+  .wheel-svg {
+    width: 100%; height: 100%;
+    transition: filter var(--dur) ease;
+  }
+
+  .month-arc {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .month-arc:hover { opacity: 0.85; }
+
+  .wheel-center-label {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    text-align: center; pointer-events: none;
+  }
+  .wcl-month {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px; line-height: 1;
+    color: var(--text); transition: color var(--dur) ease;
+    display: block;
+  }
+  .wcl-year {
+    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+    transition: color var(--dur) ease;
+    display: block; margin-top: 2px;
+  }
+
+  /* Prev/Next */
+  .wheel-controls {
+    display: flex; gap: 2rem; margin-top: 0.75rem;
+  }
+  .wheel-btn {
+    background: none; border: 0.5px solid var(--card-border);
+    color: var(--text); border-radius: 50%; width: 32px; height: 32px;
+    cursor: pointer; font-size: 14px; display: flex; align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color var(--dur) ease, border-color var(--dur) ease;
+  }
+  .wheel-btn:hover { background: var(--bg2); }
+
+  /* Produce grid */
+  .s-grid-header {
+    padding: 1rem 1.5rem 0.5rem;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .s-grid-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px; color: var(--text);
+    transition: color var(--dur) ease;
+  }
+  .s-grid-count {
+    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+    transition: color var(--dur) ease;
+  }
+
+  .s-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px; padding: 0 1rem 1.5rem;
+  }
+
+  .produce-card {
+    background: var(--bg2); border: 0.5px solid var(--card-border);
+    border-radius: 8px; overflow: hidden; cursor: pointer;
+    transition: background var(--dur) ease, border-color var(--dur) ease, transform 0.15s ease;
+    animation: cardIn 0.4s ease both;
+  }
+  .produce-card:hover { transform: translateY(-2px); }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-swatch {
+    height: 5px; width: 100%;
+    transition: background var(--dur) ease;
+  }
+  .card-body { padding: 8px 8px 9px; }
+  .card-name {
+    font-size: 12px; font-weight: 500; color: var(--text);
+    transition: color var(--dur) ease;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .card-cat {
+    font-size: 10px; color: var(--muted); letter-spacing: 0.06em;
+    transition: color var(--dur) ease; margin-top: 2px;
+  }
+  .card-icon {
+    font-size: 22px; text-align: center; padding: 6px 0 4px;
+    line-height: 1;
+  }
+</style>
+
+<h2 class="sr-only">Saison — interactive seasonal produce wheel mockup</h2>
+
+<div class="saison-root" id="saison" data-season="spring">
+  <div class="s-header">
+    <div class="s-logo">Sa<em>i</em>son</div>
+    <div class="s-tagline">Seasonal produce guide</div>
+  </div>
+
+  <div class="s-wheel-wrap">
+    <div class="s-season-label" id="season-label">Spring</div>
+    <div class="wheel-outer">
+      <svg class="wheel-svg" viewBox="0 0 240 240" id="wheel-svg"></svg>
+      <div class="wheel-center-label">
+        <span class="wcl-month" id="wcl-month">April</span>
+        <span class="wcl-year" id="wcl-year">2026</span>
+      </div>
+    </div>
+    <div class="wheel-controls">
+      <button class="wheel-btn" id="prev-btn" aria-label="Previous month">&#8592;</button>
+      <button class="wheel-btn" id="next-btn" aria-label="Next month">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="s-grid-header">
+    <div class="s-grid-title" id="grid-title">In season — April</div>
+    <div class="s-grid-count" id="grid-count"></div>
+  </div>
+  <div class="s-grid" id="produce-grid"></div>
+</div>
+
+<script>
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+const SEASONS = {
+  winter: [12,1,2], spring: [3,4,5], summer: [6,7,8], autumn: [9,10,11]
+};
+function getSeason(m) {
+  for (const [s, ms] of Object.entries(SEASONS)) if (ms.includes(m)) return s;
+  return 'winter';
+}
+
+const SEASON_LABELS = { winter:'Winter', spring:'Spring', summer:'Summer', autumn:'Autumn' };
+
+const PRODUCE = {
+  1: [{name:'Kale',cat:'vegetable',icon:'🥬',color:'#4A7040'},{name:'Leek',cat:'vegetable',icon:'🌿',color:'#6A8A58'},{name:'Parsnip',cat:'vegetable',icon:'🫚',color:'#C8A878'},{name:'Celeriac',cat:'vegetable',icon:'🪨',color:'#B8A888'},{name:'Brussels sprouts',cat:'vegetable',icon:'🟢',color:'#5A8048'},{name:'Beetroot',cat:'vegetable',icon:'🟣',color:'#8A3868'}],
+  2: [{name:'Purple sprouting broccoli',cat:'vegetable',icon:'🥦',color:'#6A4880'},{name:'Chicory',cat:'vegetable',icon:'🌿',color:'#9AAA68'},{name:'Leek',cat:'vegetable',icon:'🌿',color:'#6A8A58'},{name:'Kale',cat:'vegetable',icon:'🥬',color:'#4A7040'},{name:'Forced rhubarb',cat:'fruit',icon:'🩷',color:'#D06888'}],
+  3: [{name:'Asparagus',cat:'vegetable',icon:'🌱',color:'#6A8858'},{name:'Spinach',cat:'vegetable',icon:'🥬',color:'#4A7840'},{name:'Radish',cat:'vegetable',icon:'🔴',color:'#C03840'},{name:'Spring onion',cat:'vegetable',icon:'🌿',color:'#7AA860'},{name:'Rhubarb',cat:'fruit',icon:'🩷',color:'#D06888'},{name:'Wild garlic',cat:'herb',icon:'🌸',color:'#E8D8A0'}],
+  4: [{name:'Asparagus',cat:'vegetable',icon:'🌱',color:'#6A8858'},{name:'Peas',cat:'vegetable',icon:'🟩',color:'#70A858'},{name:'Lettuce',cat:'vegetable',icon:'🥬',color:'#88B870'},{name:'Radish',cat:'vegetable',icon:'🔴',color:'#C03840'},{name:'Rhubarb',cat:'fruit',icon:'🩷',color:'#D06888'},{name:'Spinach',cat:'vegetable',icon:'🥗',color:'#4A7840'},{name:'Sorrel',cat:'herb',icon:'🌿',color:'#6A9050'}],
+  5: [{name:'Broad beans',cat:'vegetable',icon:'🫘',color:'#788858'},{name:'Asparagus',cat:'vegetable',icon:'🌱',color:'#6A8858'},{name:'Courgette',cat:'vegetable',icon:'🟢',color:'#5A8840'},{name:'Strawberry',cat:'fruit',icon:'🍓',color:'#D04050'},{name:'Peas',cat:'vegetable',icon:'🟩',color:'#70A858'},{name:'New potatoes',cat:'vegetable',icon:'🥔',color:'#D0B878'},{name:'Gooseberry',cat:'fruit',icon:'🫐',color:'#98C878'},{name:'Basil',cat:'herb',icon:'🌿',color:'#4A8840'}],
+  6: [{name:'Strawberry',cat:'fruit',icon:'🍓',color:'#D04050'},{name:'Tomato',cat:'fruit',icon:'🍅',color:'#D04030'},{name:'Courgette',cat:'vegetable',icon:'🟢',color:'#5A8840'},{name:'Broad beans',cat:'vegetable',icon:'🫘',color:'#788858'},{name:'Cucumber',cat:'vegetable',icon:'🥒',color:'#5A9848'},{name:'Fennel',cat:'vegetable',icon:'🌿',color:'#7A9858'},{name:'Cherries',cat:'fruit',icon:'🍒',color:'#A03040'},{name:'Raspberries',cat:'fruit',icon:'🫐',color:'#C85878'}],
+  7: [{name:'Tomato',cat:'fruit',icon:'🍅',color:'#D04030'},{name:'Courgette',cat:'vegetable',icon:'🟢',color:'#5A8840'},{name:'Cucumber',cat:'vegetable',icon:'🥒',color:'#5A9848'},{name:'Sweetcorn',cat:'vegetable',icon:'🌽',color:'#D8B840'},{name:'Peach',cat:'fruit',icon:'🍑',color:'#E89868'},{name:'Blueberry',cat:'fruit',icon:'🫐',color:'#5870B8'},{name:'French beans',cat:'vegetable',icon:'🫘',color:'#6A8848'},{name:'Aubergine',cat:'vegetable',icon:'🍆',color:'#7840A8'}],
+  8: [{name:'Sweetcorn',cat:'vegetable',icon:'🌽',color:'#D8B840'},{name:'Tomato',cat:'fruit',icon:'🍅',color:'#D04030'},{name:'Peach',cat:'fruit',icon:'🍑',color:'#E89868'},{name:'Plum',cat:'fruit',icon:'🟣',color:'#804888'},{name:'Courgette',cat:'vegetable',icon:'🟢',color:'#5A8840'},{name:'Aubergine',cat:'vegetable',icon:'🍆',color:'#7840A8'},{name:'Apple',cat:'fruit',icon:'🍏',color:'#70A048'}],
+  9: [{name:'Apple',cat:'fruit',icon:'🍎',color:'#C83838'},{name:'Squash',cat:'vegetable',icon:'🎃',color:'#D07828'},{name:'Pear',cat:'fruit',icon:'🍐',color:'#98B860'},{name:'Sweetcorn',cat:'vegetable',icon:'🌽',color:'#D8B840'},{name:'Plum',cat:'fruit',icon:'🟣',color:'#804888'},{name:'Blackberry',cat:'fruit',icon:'🫐',color:'#503868'},{name:'Celery',cat:'vegetable',icon:'🌿',color:'#78A060'}],
+  10: [{name:'Butternut squash',cat:'vegetable',icon:'🎃',color:'#D07828'},{name:'Apple',cat:'fruit',icon:'🍎',color:'#C83838'},{name:'Pumpkin',cat:'vegetable',icon:'🟠',color:'#E07030'},{name:'Pear',cat:'fruit',icon:'🍐',color:'#98B860'},{name:'Quince',cat:'fruit',icon:'🟡',color:'#C8A840'},{name:'Celeriac',cat:'vegetable',icon:'🪨',color:'#B8A888'},{name:'Kale',cat:'vegetable',icon:'🥬',color:'#4A7040'}],
+  11: [{name:'Parsnip',cat:'vegetable',icon:'🫚',color:'#C8A878'},{name:'Celeriac',cat:'vegetable',icon:'🪨',color:'#B8A888'},{name:'Leek',cat:'vegetable',icon:'🌿',color:'#6A8A58'},{name:'Brussels sprouts',cat:'vegetable',icon:'🟢',color:'#5A8048'},{name:'Pumpkin',cat:'vegetable',icon:'🟠',color:'#E07030'},{name:'Quinces',cat:'fruit',icon:'🟡',color:'#C8A840'}],
+  12: [{name:'Brussels sprouts',cat:'vegetable',icon:'🟢',color:'#5A8048'},{name:'Parsnip',cat:'vegetable',icon:'🫚',color:'#C8A878'},{name:'Kale',cat:'vegetable',icon:'🥬',color:'#4A7040'},{name:'Leek',cat:'vegetable',icon:'🌿',color:'#6A8A58'},{name:'Celeriac',cat:'vegetable',icon:'🪨',color:'#B8A888'},{name:'Red cabbage',cat:'vegetable',icon:'🟣',color:'#6A3868'}]
+};
+
+const SEASON_COLORS = {
+  winter: { track:'#9BAFC4', active:'#4E6E88', text:'#2E3540', muted:'#7A8899', bg:'#EEF0F2' },
+  spring: { track:'#90B870', active:'#4A7838', text:'#252E20', muted:'#6A7A60', bg:'#EFF2EA' },
+  summer: { track:'#D0A870', active:'#905830', text:'#342820', muted:'#7A6450', bg:'#F4F0E6' },
+  autumn: { track:'#C09060', active:'#7A3E18', text:'#2E2018', muted:'#7A6050', bg:'#F0EAE2' }
+};
+
+let currentMonth = new Date().getMonth() + 1;
+
+function drawWheel(month) {
+  const svg = document.getElementById('wheel-svg');
+  const cx = 120, cy = 120, R = 108, r = 64;
+  const season = getSeason(month);
+  const sc = SEASON_COLORS[season];
+
+  svg.innerHTML = '';
+
+  for (let i = 0; i < 12; i++) {
+    const m = i + 1;
+    const startAngle = (i * 30 - 90) * Math.PI / 180;
+    const endAngle = ((i + 1) * 30 - 90) * Math.PI / 180;
+    const gap = 0.03;
+    const sa = startAngle + gap, ea = endAngle - gap;
+
+    const x1 = cx + R * Math.cos(sa), y1 = cy + R * Math.sin(sa);
+    const x2 = cx + R * Math.cos(ea), y2 = cy + R * Math.sin(ea);
+    const x3 = cx + r * Math.cos(ea), y3 = cy + r * Math.sin(ea);
+    const x4 = cx + r * Math.cos(sa), y4 = cy + r * Math.sin(sa);
+
+    const isActive = m === month;
+    const isSameSeason = getSeason(m) === season;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    const d = `M${x1} ${y1} A${R} ${R} 0 0 1 ${x2} ${y2} L${x3} ${y3} A${r} ${r} 0 0 0 ${x4} ${y4} Z`;
+    path.setAttribute('d', d);
+    path.setAttribute('fill', isActive ? sc.active : isSameSeason ? sc.track : sc.track + '70');
+    path.setAttribute('class','month-arc');
+    path.setAttribute('data-month', m);
+    path.addEventListener('click', () => setMonth(m));
+
+    svg.appendChild(path);
+
+    const midAngle = ((i + 0.5) * 30 - 90) * Math.PI / 180;
+    const labelR = (R + r) / 2;
+    const lx = cx + labelR * Math.cos(midAngle);
+    const ly = cy + labelR * Math.sin(midAngle);
+
+    const text = document.createElementNS('http://www.w3.org/2000/svg','text');
+    text.setAttribute('x', lx); text.setAttribute('y', ly);
+    text.setAttribute('text-anchor','middle'); text.setAttribute('dominant-baseline','central');
+    text.setAttribute('font-size', isActive ? '9.5' : '8.5');
+    text.setAttribute('font-weight', isActive ? '500' : '400');
+    text.setAttribute('fill', isActive ? '#fff' : sc.text + 'CC');
+    text.setAttribute('font-family','DM Sans, sans-serif');
+    text.setAttribute('pointer-events','none');
+    text.textContent = SHORT[i];
+    svg.appendChild(text);
+  }
+}
+
+function setMonth(m) {
+  if (m < 1) m = 12;
+  if (m > 12) m = 1;
+  currentMonth = m;
+
+  const season = getSeason(m);
+  const root = document.getElementById('saison');
+  root.setAttribute('data-season', season);
+
+  document.getElementById('season-label').textContent = SEASON_LABELS[season];
+  document.getElementById('wcl-month').textContent = MONTHS[m - 1];
+  document.getElementById('grid-title').textContent = `In season — ${MONTHS[m - 1]}`;
+
+  const items = PRODUCE[m] || [];
+  document.getElementById('grid-count').textContent = `${items.length} items`;
+
+  drawWheel(m);
+  renderGrid(m);
+}
+
+function renderGrid(m) {
+  const grid = document.getElementById('produce-grid');
+  const items = PRODUCE[m] || [];
+  grid.innerHTML = '';
+  items.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'produce-card';
+    card.style.animationDelay = (i * 40) + 'ms';
+    card.innerHTML = `
+      <div class="card-swatch" style="background:${p.color}"></div>
+      <div class="card-icon">${p.icon}</div>
+      <div class="card-body">
+        <div class="card-name">${p.name}</div>
+        <div class="card-cat">${p.cat}</div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+document.getElementById('prev-btn').addEventListener('click', () => setMonth(currentMonth - 1));
+document.getElementById('next-btn').addEventListener('click', () => setMonth(currentMonth + 1));
+
+setMonth(currentMonth);
+</script>

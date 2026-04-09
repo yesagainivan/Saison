@@ -1,0 +1,5 @@
+saison_web/node_modules
+saison_web/.svelte-kit
+saison_web/db.sqlite
+saison_web/db.sqlite-wal
+saison_web/db.sqlite-shm
