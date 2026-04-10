@@ -17,7 +17,7 @@ zone_offset: 0
 colors: ["#4A8840", "#2F6626"]
 companions: [tomato, oregano]
 avoid: [rue]
-illustration: tomato.svg
+illustration: basil.svg
 ---
 
 The quintessential summer herb.

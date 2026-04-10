@@ -17,7 +17,7 @@ zone_offset: 0
 colors: ["#E07030", "#BA5011"]
 companions: [corn, beans]
 avoid: [potato]
-illustration: tomato.svg
+illustration: pumpkin.svg
 ---
 
 Essential for autumn.

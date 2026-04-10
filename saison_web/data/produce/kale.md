@@ -17,7 +17,7 @@ zone_offset: 0
 colors: ["#4A7040", "#2D4C25"]
 companions: [beetroot, potato]
 avoid: [tomato, strawberry]
-illustration: tomato.svg
+illustration: kale.svg
 ---
 
 Tough, resiliant and nutrient dense.

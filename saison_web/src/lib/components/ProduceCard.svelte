@@ -15,7 +15,8 @@
 	});
 </script>
 
-<article 
+<a 
+	href="/produce/{produce.id}"
 	class="produce-card" 
 	class:featured={produce.featured}
 	style="animation-delay: {index * 40}ms"
@@ -42,7 +43,7 @@
 			<CategoryBadge category={produce.category} />
 		</div>
 	</div>
-</article>
+</a>
 
 <style>
 	.produce-card {
@@ -52,7 +53,7 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		cursor: pointer;
+		text-decoration: none;
 		position: relative;
 		transition: background-color var(--dur) ease, border-color var(--dur) ease, transform 0.2s ease, box-shadow 0.2s ease;
 		animation: cardIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
