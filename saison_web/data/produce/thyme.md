@@ -1,0 +1,17 @@
+---
+id: thyme
+name: Thyme
+category: herb
+featured: false
+season_start: 5
+season_end: 10
+planting_start: 4
+planting_end: 6
+hemisphere: northern
+colors: ["#7DCEA0","#52BE80"]
+companions: ["eggplant","potato","rosemary","tomato"]
+avoid: []
+illustration: default.svg
+---
+
+A delicate, aromatic herb forming dense carpets of flavourful foliage.

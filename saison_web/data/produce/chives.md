@@ -1,0 +1,17 @@
+---
+id: chives
+name: Chives
+category: herb
+featured: false
+season_start: 5
+season_end: 9
+planting_start: 3
+planting_end: 5
+hemisphere: northern
+colors: ["#E1BEE7","#CE93D8"]
+companions: ["carrot","tomato","rosemary"]
+avoid: ["beans","peas"]
+illustration: default.svg
+---
+
+A visually striking flowering herb lending a sharp onion/garlic accent.

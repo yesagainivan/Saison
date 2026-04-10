@@ -1,0 +1,17 @@
+---
+id: cauliflower
+name: Cauliflower
+category: vegetable
+featured: false
+season_start: 7
+season_end: 11
+planting_start: 5
+planting_end: 7
+hemisphere: northern
+colors: ["#FDFEFE","#F0F3F4"]
+companions: ["beans","onion","celery"]
+avoid: ["tomato","strawberry"]
+illustration: default.svg
+---
+
+A structurally beautiful cruciferous vegetable forming a white floral head.

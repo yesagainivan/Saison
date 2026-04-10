@@ -32,8 +32,8 @@
     <div class="s-tagline">Seasonal produce guide</div>
   </div>
   <nav class="s-nav">
-    <a href="/" class="nav-link" class:active={page.route.id === '/' || page.route.id?.startsWith('/produce')}>Dial</a>
-    <a href="/ecosystem" class="nav-link" class:active={page.route.id === '/ecosystem'}>Ecosystem</a>
+    <a href="/" class="nav-link" class:active={page.url.pathname === '/' || page.url.pathname.startsWith('/produce')}>Dial</a>
+    <a href="/ecosystem" class="nav-link" class:active={page.url.pathname === '/ecosystem'}>Ecosystem</a>
   </nav>
 </header>
 
