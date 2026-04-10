@@ -2,10 +2,11 @@
   import '../app.css';
   import { getSeasonForMonth } from '$lib/types';
   import { setContext } from 'svelte';
+  import { page } from '$app/state';
 
   let { children } = $props();
 
-  let initialMonth = Number($page.url.searchParams.get('month')) || (new Date().getMonth() + 1);
+  let initialMonth = Number(page.url.searchParams.get('month')) || (new Date().getMonth() + 1);
   let currentMonth = $state(initialMonth);
 
   // Sync back to URL or just let it stay local, local is fine for the wheel since it's an app-like experience
@@ -26,8 +27,14 @@
 </script>
 
 <header class="s-header">
-  <div class="s-logo">Sa<em>i</em>son</div>
-  <div class="s-tagline">Seasonal produce guide</div>
+  <div class="s-logo-group">
+    <div class="s-logo">Sa<em>i</em>son</div>
+    <div class="s-tagline">Seasonal produce guide</div>
+  </div>
+  <nav class="s-nav">
+    <a href="/" class="nav-link" class:active={page.route.id === '/' || page.route.id?.startsWith('/produce')}>Dial</a>
+    <a href="/ecosystem" class="nav-link" class:active={page.route.id === '/ecosystem'}>Ecosystem</a>
+  </nav>
 </header>
 
 <main>
@@ -38,11 +45,34 @@
   .s-header {
     padding: 1.5rem 1.5rem 0;
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
-    gap: 1rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 1rem;
     transition: border-color var(--dur) ease;
+  }
+  
+  .s-logo-group {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .s-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: var(--text);
   }
   
   .s-logo {

@@ -11,7 +11,7 @@ The core loop: a beautiful, living calendar that tells you what is in season rig
   - Ensure Svelte 5 is configured for the modern Runes API (`$state`, `$derived`, `$props`).
 - [x] Configure `bun:sqlite` integration in SvelteKit server routes (`+page.server.ts`)
 - [x] Set up project structure: `/data/produce/`, `/src/lib/db/`, `/src/lib/tokens/`, `/static/illustrations/`
-- [ ] Write and document YAML frontmatter schema (`CONTRIBUTING.md`) with the new `featured` and `illustration` fields
+- [x] Write and document YAML frontmatter schema (`CONTRIBUTING.md`) with the new `featured` and `illustration` fields
 - [x] Write `bun run seed` ingestion script to parse Markdown into SQLite
 - [x] Add `bun run seed` to `postinstall` so the DB is always fresh on setup
 
@@ -35,8 +35,8 @@ The core loop: a beautiful, living calendar that tells you what is in season rig
 
 ### Views & Content
 - [x] `/` — landing page, defaults to current month, renders category-grouped produce grid
-- [ ] `/month/[month]` — same view for any month (1–12)
-- [ ] `/produce/[id]` — detail page with Temporal Map, prose, and botanical illustration hero
+- [x] `/month/[month]` — same view for any month (1–12)
+- [x] `/produce/[id]` — detail page with Temporal Map, prose, and botanical illustration hero
 - [ ] Seed the database with **50 common fruits and vegetables** (northern hemisphere)
 - [x] Commission/source basic SVG botanical line drawings for all Phase 1 produce
 

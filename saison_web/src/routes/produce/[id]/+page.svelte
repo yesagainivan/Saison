@@ -3,6 +3,7 @@
   import CategoryBadge from '$lib/components/CategoryBadge.svelte';
   import TemporalMap from '$lib/components/TemporalMap.svelte';
   import { getSeasonForMonth } from '$lib/types';
+  import { garden } from '$lib/stores/garden.svelte';
 
   let { data }: { data: PageData } = $props();
   let produce = $derived(data.produce);
@@ -27,7 +28,7 @@
   });
 
   // Calculate if it's featured
-  const isSown = produce.planting_start != null;
+  const isSown = $derived(produce.planting_start != null);
 </script>
 
 <svelte:head>
@@ -43,6 +44,14 @@
       {#if produce.name_fr}
         <h2 class="produce-fr">{produce.name_fr}</h2>
       {/if}
+    </div>
+    <div class="header-actions">
+      <button 
+        class="garden-btn" 
+        class:planted={garden.has(produce.id)} 
+        onclick={() => garden.has(produce.id) ? garden.remove(produce.id) : garden.add(produce.id)}>
+          {garden.has(produce.id) ? '✓ In Your Garden' : '+ Plant in Garden'}
+      </button>
     </div>
   </header>
 
@@ -119,6 +128,33 @@
   .detail-header {
     padding: 3rem 3rem 1.5rem;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .garden-btn {
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all var(--dur) ease;
+  }
+  
+  .garden-btn:hover {
+    background: var(--bg-card);
+  }
+
+  .garden-btn.planted {
+    background: var(--accent);
+    color: var(--bg-surface);
   }
 
   .produce-name {
@@ -149,8 +185,14 @@
     align-items: flex-start;
   }
 
+  .illustration-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .illustration-wrap img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     max-height: 400px;
     mix-blend-mode: multiply;
