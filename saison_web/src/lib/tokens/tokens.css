@@ -1,0 +1,56 @@
+:root {
+  --bg:        #EEF0F2;
+  --bg-card:   #E2E5E9;
+  --bg-surface:#F5F6F8;
+  --accent:    #7A8FA6;
+  --text:      #2E3540;
+  --text-muted:#7A8899;
+  --highlight: #A0B4C8;
+  --border:    #C8D4DE;
+  
+  --dur: 700ms;
+}
+
+[data-season="winter"] {
+  --bg:        #EEF0F2;
+  --bg-card:   #E2E5E9;
+  --bg-surface:#F5F6F8;
+  --accent:    #7A8FA6;
+  --text:      #2E3540;
+  --text-muted:#7A8899;
+  --highlight: #A0B4C8;
+  --border:    #C8D4DE;
+}
+
+[data-season="spring"] {
+  --bg:        #EFF2EA;
+  --bg-card:   #E3E9DB;
+  --bg-surface:#F5F7F0;
+  --accent:    #6A8A58;
+  --text:      #252E20;
+  --text-muted:#6A7A60;
+  --highlight: #A8C890;
+  --border:    #C0D4AC;
+}
+
+[data-season="summer"] {
+  --bg:        #F4F0E6;
+  --bg-card:   #EBE4D4;
+  --bg-surface:#F9F5EC;
+  --accent:    #B87858;
+  --text:      #342820;
+  --text-muted:#7A6450;
+  --highlight: #D8A870;
+  --border:    #D4C0A0;
+}
+
+[data-season="autumn"] {
+  --bg:        #F0EAE2;
+  --bg-card:   #E6DDD2;
+  --bg-surface:#F6F0E8;
+  --accent:    #9A5E38;
+  --text:      #2E2018;
+  --text-muted:#7A6050;
+  --highlight: #C09060;
+  --border:    #C8B090;
+}

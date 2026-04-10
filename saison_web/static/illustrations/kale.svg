@@ -1,0 +1,8 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stem -->
+  <path d="M 50 95 Q 45 60 50 15" fill="none" stroke="currentColor" stroke-width="2" />
+  <!-- Frilly leaves -->
+  <path d="M 50 85 Q 30 75 25 65 Q 15 50 35 45 Q 25 35 40 25 Q 35 15 50 15 Q 65 15 60 25 Q 75 35 65 45 Q 85 50 75 65 Q 70 75 50 85" fill="none" stroke="currentColor" stroke-width="2" />
+  <!-- Inner veins -->
+  <path d="M 48 70 Q 30 65 28 60 M 52 50 Q 70 45 72 40 M 49 35 Q 35 30 35 25 M 51 25 Q 60 20 62 15" fill="none" stroke="currentColor" stroke-width="1.5" />
+</svg>

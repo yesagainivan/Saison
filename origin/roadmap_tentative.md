@@ -7,38 +7,38 @@
 The core loop: a beautiful, living calendar that tells you what is in season right now, using the new "Botanical Modernism" aesthetic.
 
 ### Infrastructure & Data Layer
-- [ ] Initialise SvelteKit project with Bun as runtime (`bun create svelte@latest`)
+- [x] Initialise SvelteKit project with Bun as runtime (`bun create svelte@latest`)
   - Ensure Svelte 5 is configured for the modern Runes API (`$state`, `$derived`, `$props`).
-- [ ] Configure `bun:sqlite` integration in SvelteKit server routes (`+page.server.ts`)
-- [ ] Set up project structure: `/data/produce/`, `/src/lib/db/`, `/src/lib/tokens/`, `/static/illustrations/`
+- [x] Configure `bun:sqlite` integration in SvelteKit server routes (`+page.server.ts`)
+- [x] Set up project structure: `/data/produce/`, `/src/lib/db/`, `/src/lib/tokens/`, `/static/illustrations/`
 - [ ] Write and document YAML frontmatter schema (`CONTRIBUTING.md`) with the new `featured` and `illustration` fields
-- [ ] Write `bun run seed` ingestion script to parse Markdown into SQLite
-- [ ] Add `bun run seed` to `postinstall` so the DB is always fresh on setup
+- [x] Write `bun run seed` ingestion script to parse Markdown into SQLite
+- [x] Add `bun run seed` to `postinstall` so the DB is always fresh on setup
 
 ### Design System & "Botanical Modernism"
-- [ ] Define `tokens.css`: seasonal CSS custom properties for all 4 seasons with per-month palette interpolation
-- [ ] Define `reset.css` and base typography (serif display + neutral sans)
-- [ ] Implement the subtle paper texture (CSS-only noise pattern) for the main background and card surfaces
-- [ ] Build the core component library using Svelte 5 Runes and Snippets:
+- [x] Define `tokens.css`: seasonal CSS custom properties for all 4 seasons with per-month palette interpolation
+- [x] Define `reset.css` and base typography (serif display + neutral sans)
+- [x] Implement the subtle paper texture (CSS-only noise pattern) for the main background and card surfaces
+- [x] Build the core component library using Svelte 5 Runes and Snippets:
   - `<ProduceCard />` — curated grid card with SVG illustration, colour strip, soft shadow, and categorical grouping
   - `<TemporalMap />` — SVG 12-month timeline bar
   - `<SeasonWheel />` — the circular month navigator
   - `<CategoryBadge />` — pill for fruit / vegetable / herb / flower
 
 ### The Wheel & Layout
-- [ ] Build `<SeasonWheel />` as an SVG-based circular month selector
-- [ ] Ensure wheel scales gracefully on mobile displays
-- [ ] Season-aware palette transition on month change (700ms CSS transition on tokens)
-- [ ] Keyboard accessible (arrow keys, Enter to select) + touch drag support
+- [x] Build `<SeasonWheel />` as an SVG-based circular month selector
+- [x] Ensure wheel scales gracefully on mobile displays
+- [x] Season-aware palette transition on month change (700ms CSS transition on tokens)
+- [x] Keyboard accessible (arrow keys, Enter to select) + touch drag support
 - [ ] Screen-reader accessibility with `aria-label` and `aria-current`
-- [ ] Implement the curated CSS Grid layout: grouped by category, with `featured: true` items spanning 2 columns, and staggered entrance animations.
+- [x] Implement the curated CSS Grid layout: grouped by category, with `featured: true` items spanning 2 columns, and staggered entrance animations.
 
 ### Views & Content
-- [ ] `/` — landing page, defaults to current month, renders category-grouped produce grid
+- [x] `/` — landing page, defaults to current month, renders category-grouped produce grid
 - [ ] `/month/[month]` — same view for any month (1–12)
 - [ ] `/produce/[id]` — detail page with Temporal Map, prose, and botanical illustration hero
 - [ ] Seed the database with **50 common fruits and vegetables** (northern hemisphere)
-- [ ] Commission/source basic SVG botanical line drawings for all Phase 1 produce
+- [x] Commission/source basic SVG botanical line drawings for all Phase 1 produce
 
 ---
 
