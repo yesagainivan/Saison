@@ -9,8 +9,8 @@ season_end: 12
 planting_start: 3
 planting_end: 5
 hemisphere: northern
-colors: ["#F7DC6F","#F1C40F"]
-companions: ["basil","marigold"]
+colors: ['#F7DC6F', '#F1C40F']
+companions: ['basil', 'marigold']
 avoid: []
 illustration: lemon.svg
 ---

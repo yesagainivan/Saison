@@ -14,7 +14,7 @@ harvest_start: 10
 harvest_end: 2
 hemisphere: northern
 zone_offset: 0
-colors: ["#4A7040", "#2D4C25"]
+colors: ['#4A7040', '#2D4C25']
 companions: [beetroot, potato]
 avoid: [tomato, strawberry]
 illustration: kale.svg

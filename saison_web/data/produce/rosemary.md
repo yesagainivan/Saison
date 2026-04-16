@@ -9,10 +9,17 @@ season_end: 12
 planting_start: 4
 planting_end: 6
 hemisphere: northern
-colors: ["#5F6A6A","#797D7F"]
-companions: ["cabbage","beans","carrot"]
+colors:
+  - '#5F6A6A'
+  - '#797D7F'
+companions:
+  - cabbage
+  - beans
+  - carrot
 avoid: []
 illustration: rosemary.svg
+description: A woody, perennial herb with fragrant, evergreen, needle-like leaves.
+description_fr: >-
+  Herbe ligneuse vivace au puissant arôme rappelant le pin, symbole de la
+  cuisine méditerranéenne.
 ---
-
-A woody, perennial herb with fragrant, evergreen, needle-like leaves.

@@ -2,8 +2,10 @@
 	import type { PageData } from './$types';
 	import CategoryBadge from '$lib/components/CategoryBadge.svelte';
 	import TemporalMap from '$lib/components/TemporalMap.svelte';
-	import { getSeasonForMonth } from '$lib/types';
 	import { garden } from '$lib/stores/garden.svelte';
+	import { appSettings } from '$lib/stores/settings.svelte';
+	import { t } from '$lib/i18n';
+	import { resolve, asset } from '$app/paths';
 
 	let { data }: { data: PageData } = $props();
 	let produce = $derived(data.produce);
@@ -12,7 +14,7 @@
 		if (!produce.colors) return ['#cccccc'];
 		try {
 			return JSON.parse(produce.colors as unknown as string);
-		} catch (e) {
+		} catch {
 			return ['#cccccc'];
 		}
 	});
@@ -24,7 +26,7 @@
 		if (!produce.companions) return [];
 		try {
 			return JSON.parse(produce.companions as unknown as string) as string[];
-		} catch (e) {
+		} catch {
 			return [];
 		}
 	});
@@ -33,14 +35,18 @@
 		if (!produce.avoid) return [];
 		try {
 			return JSON.parse(produce.avoid as unknown as string) as string[];
-		} catch (e) {
+		} catch {
 			return [];
 		}
 	});
 </script>
 
 <svelte:head>
-	<title>Saison - {produce.name}</title>
+	<title
+		>Saison - {appSettings.language === 'fr'
+			? produce.name_fr || produce.name
+			: produce.name}</title
+	>
 </svelte:head>
 
 <div class="top-actions">
@@ -48,9 +54,9 @@
 		class="back-link"
 		aria-label="Go back"
 		onclick={() =>
-			window.history.length > 2 ? window.history.back() : (window.location.href = '/')}
+			window.history.length > 2 ? window.history.back() : (window.location.href = resolve('/'))}
 	>
-		← Back
+		← {t('back')}
 	</button>
 </div>
 
@@ -59,9 +65,14 @@
 	<header class="detail-header">
 		<div class="header-text">
 			<CategoryBadge category={produce.category} />
-			<h1 class="produce-name">{produce.name}</h1>
-			{#if produce.name_fr}
-				<h2 class="produce-fr">{produce.name_fr}</h2>
+			{#if appSettings.language === 'fr'}
+				<h1 class="produce-name">{produce.name_fr || produce.name}</h1>
+				<h2 class="produce-fr">{produce.name}</h2>
+			{:else}
+				<h1 class="produce-name">{produce.name}</h1>
+				{#if produce.name_fr}
+					<h2 class="produce-fr">{produce.name_fr}</h2>
+				{/if}
 			{/if}
 		</div>
 		<div class="header-actions">
@@ -71,7 +82,13 @@
 				onclick={() =>
 					garden.has(produce.id) ? garden.remove(produce.id) : garden.add(produce.id)}
 			>
-				{garden.has(produce.id) ? '✓ In Your Garden' : '+ Plant in Garden'}
+				{garden.has(produce.id)
+					? appSettings.language === 'fr'
+						? '✓ Dans mon jardin'
+						: '✓ In Your Garden'
+					: appSettings.language === 'fr'
+						? '+ Planter au jardin'
+						: '+ Plant in Garden'}
 			</button>
 		</div>
 	</header>
@@ -80,7 +97,7 @@
 		<div class="column illustration-col">
 			<div class="illustration-wrap">
 				{#if produce.illustration}
-					<img src="/illustrations/{produce.illustration}" alt={produce.name} />
+					<img src={asset(`/illustrations/${produce.illustration}`)} alt={produce.name} />
 				{:else}
 					<div class="placeholder">No illustration available</div>
 				{/if}
@@ -88,35 +105,39 @@
 		</div>
 		<div class="column content-col">
 			<div class="description prose">
-				<p>{produce.description}</p>
+				<p>
+					{appSettings.language === 'fr' && produce.description_fr
+						? produce.description_fr
+						: produce.description}
+				</p>
 			</div>
 
 			<div class="season-block">
-				<h3 class="section-title">Peak Harvest</h3>
+				<h3 class="section-title">{t('peak_harvest')}</h3>
 				<TemporalMap seasonStart={produce.season_start} seasonEnd={produce.season_end} />
 			</div>
 
 			{#if isSown}
 				<div class="season-block">
-					<h3 class="section-title">Planting Window</h3>
+					<h3 class="section-title">{t('planting_window')}</h3>
 					<TemporalMap seasonStart={produce.planting_start!} seasonEnd={produce.planting_end!} />
 				</div>
 			{/if}
 
 			<div class="meta-data">
 				<div class="meta-item">
-					<span class="meta-label">Hemisphere</span>
-					<span class="meta-value">{produce.hemisphere}</span>
+					<span class="meta-label">{t('hemisphere')}</span>
+					<span class="meta-value">{t(produce.hemisphere)}</span>
 				</div>
 				{#if companions.length > 0}
 					<div class="meta-item">
-						<span class="meta-label">Companions</span>
+						<span class="meta-label">{t('companions')}</span>
 						<span class="meta-value">{companions.join(', ')}</span>
 					</div>
 				{/if}
 				{#if avoid.length > 0}
 					<div class="meta-item">
-						<span class="meta-label">Avoid Planting With</span>
+						<span class="meta-label">{t('avoid')}</span>
 						<span class="meta-value">{avoid.join(', ')}</span>
 					</div>
 				{/if}
@@ -297,10 +318,6 @@
 
 		.detail-header {
 			padding: 2rem 2rem 1rem;
-		}
-
-		.back-nav {
-			padding: 1rem 2rem 2rem;
 		}
 	}
 </style>

@@ -9,8 +9,8 @@ season_end: 9
 planting_start: 11
 planting_end: 3
 hemisphere: northern
-colors: ["#F8C471","#E67E22"]
-companions: ["garlic","basil","onion"]
+colors: ['#F8C471', '#E67E22']
+companions: ['garlic', 'basil', 'onion']
 avoid: []
 illustration: peach.svg
 ---

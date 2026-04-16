@@ -9,9 +9,9 @@ season_end: 9
 planting_start: 4
 planting_end: 7
 hemisphere: northern
-colors: ["#ADEFD1","#00203F"]
-companions: ["beans","tomato"]
-avoid: ["fennel"]
+colors: ['#ADEFD1', '#00203F']
+companions: ['beans', 'tomato']
+avoid: ['fennel']
 illustration: cilantro.svg
 ---
 

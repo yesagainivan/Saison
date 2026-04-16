@@ -9,9 +9,9 @@ season_end: 12
 planting_start: 4
 planting_end: 6
 hemisphere: northern
-colors: ["#EDF7F2","#A9DFBF"]
-companions: ["carrot","celery","onion"]
-avoid: ["beans","peas"]
+colors: ['#EDF7F2', '#A9DFBF']
+companions: ['carrot', 'celery', 'onion']
+avoid: ['beans', 'peas']
 illustration: leek.svg
 ---
 

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Produce } from '$lib/types';
 	import CategoryBadge from './CategoryBadge.svelte';
+	import { resolve, asset } from '$app/paths';
+	import { appSettings } from '$lib/stores/settings.svelte';
 
 	let { produce, index = 0 }: { produce: Produce; index?: number } = $props();
 
@@ -9,36 +11,43 @@
 		if (!produce.colors) return ['#cccccc'];
 		try {
 			return JSON.parse(produce.colors as unknown as string);
-		} catch (e) {
+		} catch {
 			return ['#cccccc'];
 		}
 	});
 </script>
 
-<a 
-	href="/produce/{produce.id}"
-	class="produce-card" 
+<a
+	href={resolve(`/produce/${produce.id}`)}
+	class="produce-card"
 	class:featured={produce.featured}
 	style="animation-delay: {index * 40}ms"
 >
 	<div class="swatch-strip" style="background: {swatches[0]}"></div>
-	
+
 	<div class="card-content">
 		<div class="card-header">
-			<h3 class="card-name">{produce.name}</h3>
-			{#if produce.name_fr}
+			<h3 class="card-name">
+				{appSettings.language === 'fr' && produce.name_fr ? produce.name_fr : produce.name}
+			</h3>
+			{#if produce.name_fr && appSettings.language !== 'fr'}
 				<span class="card-fr">{produce.name_fr}</span>
+			{:else if appSettings.language === 'fr' && produce.name}
+				<span class="card-fr">{produce.name}</span>
 			{/if}
 		</div>
-		
+
 		<div class="card-illustration">
 			{#if produce.illustration}
-				<img src="/illustrations/{produce.illustration}" alt="Illustration of {produce.name}" />
+				<img
+					src={asset(`/illustrations/${produce.illustration}`)}
+					alt="Illustration of {produce.name}"
+				/>
 			{:else}
 				<div class="placeholder"></div>
 			{/if}
 		</div>
-		
+
 		<div class="card-footer">
 			<CategoryBadge category={produce.category} />
 		</div>
@@ -55,11 +64,15 @@
 		flex-direction: column;
 		text-decoration: none;
 		position: relative;
-		transition: background-color var(--dur) ease, border-color var(--dur) ease, transform 0.2s ease, box-shadow 0.2s ease;
+		transition:
+			background-color var(--dur) ease,
+			border-color var(--dur) ease,
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
 		animation: cardIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 	}
-	
+
 	.produce-card:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
@@ -116,7 +129,7 @@
 		align-items: center;
 		flex-grow: 1;
 	}
-	
+
 	.card-illustration img {
 		max-width: 60px;
 		height: auto;
@@ -131,7 +144,13 @@
 	}
 
 	@keyframes cardIn {
-		from { opacity: 0; transform: translateY(10px); }
-		to   { opacity: 1; transform: translateY(0); }
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>

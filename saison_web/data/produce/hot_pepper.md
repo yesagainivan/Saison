@@ -9,9 +9,9 @@ season_end: 10
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#C0392B","#922B21"]
-companions: ["basil","onion","carrot"]
-avoid: ["beans"]
+colors: ['#C0392B', '#922B21']
+companions: ['basil', 'onion', 'carrot']
+avoid: ['beans']
 illustration: hot_pepper.svg
 ---
 

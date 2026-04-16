@@ -9,8 +9,8 @@ season_end: 8
 planting_start: 11
 planting_end: 3
 hemisphere: northern
-colors: ["#E74C3C","#C0392B"]
-companions: ["tansy","tomato"]
+colors: ['#E74C3C', '#C0392B']
+companions: ['tansy', 'tomato']
 avoid: []
 illustration: currant.svg
 ---

@@ -9,9 +9,9 @@ season_end: 8
 planting_start: 9
 planting_end: 11
 hemisphere: northern
-colors: ["#F5F5DC","#E0E0D1"]
-companions: ["tomato","carrot","eggplant","cabbage"]
-avoid: ["beans","peas","parsley"]
+colors: ['#F5F5DC', '#E0E0D1']
+companions: ['tomato', 'carrot', 'eggplant', 'cabbage']
+avoid: ['beans', 'peas', 'parsley']
 illustration: garlic.svg
 ---
 

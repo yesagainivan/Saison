@@ -9,8 +9,8 @@ season_end: 11
 planting_start: 3
 planting_end: 8
 hemisphere: northern
-colors: ["#82E0AA","#2ECC71"]
-companions: ["lettuce","radish"]
+colors: ['#82E0AA', '#2ECC71']
+companions: ['lettuce', 'radish']
 avoid: []
 illustration: chervil.svg
 ---

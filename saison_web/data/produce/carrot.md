@@ -9,10 +9,22 @@ season_end: 11
 planting_start: 3
 planting_end: 7
 hemisphere: northern
-colors: ["#E67E22","#D35400"]
-companions: ["onion","lettuce","rosemary","tomato"]
-avoid: ["dill","parsnip"]
+colors:
+  - '#E67E22'
+  - '#D35400'
+companions:
+  - onion
+  - lettuce
+  - rosemary
+  - tomato
+avoid:
+  - dill
+  - parsnip
 illustration: carrot.svg
+description: >-
+  A sweet, crunchy root vegetable packed with beta-carotene. Cultivated for its
+  robust taproot.
+description_fr: >-
+  Un légume-racine sucré et croquant, riche en bêta-carotène et indispensable en
+  cuisine.
 ---
-
-A sweet, crunchy root vegetable packed with beta-carotene. Cultivated for its robust taproot.

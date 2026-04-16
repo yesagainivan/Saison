@@ -9,10 +9,18 @@ season_end: 10
 planting_start: 11
 planting_end: 3
 hemisphere: northern
-colors: ["#F4D03F","#D4AC0D"]
-companions: ["dill","clover"]
+colors:
+  - '#F4D03F'
+  - '#D4AC0D'
+companions:
+  - dill
+  - clover
 avoid: []
 illustration: pear.svg
+description: >-
+  An elegant, bell-shaped fruit with a buttery texture when ripe. Best harvested
+  while still slightly firm to allow for perfect ripening off the tree.
+description_fr: >-
+  Un fruit élégant en forme de cloche avec une texture fondante et beurrée à
+  maturité, excellent cru ou poché.
 ---
-
-An elegant, bell-shaped fruit with a buttery texture when ripe. Best harvested while still slightly firm to allow for perfect ripening off the tree.

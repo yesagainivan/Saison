@@ -9,10 +9,20 @@ season_end: 12
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#52BE80","#27AE60"]
-companions: ["potato","onion"]
-avoid: ["tomato","strawberry"]
+colors:
+  - '#52BE80'
+  - '#27AE60'
+companions:
+  - potato
+  - onion
+avoid:
+  - tomato
+  - strawberry
 illustration: brussels_sprout.svg
+description: >-
+  Tiny cabbages growing proudly on an elongated, sturdy stalk. Peaks after a
+  light frost.
+description_fr: >-
+  Choux miniatures qui développent leur douceur caractéristique après les
+  premières gelées de l'automne.
 ---
-
-Tiny cabbages growing proudly on an elongated, sturdy stalk. Peaks after a light frost.

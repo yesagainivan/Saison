@@ -9,10 +9,23 @@ season_end: 9
 planting_start: 3
 planting_end: 5
 hemisphere: northern
-colors: ["#F1C40F","#F39C12"]
-companions: ["carrot","beetroot","cabbage","lettuce"]
-avoid: ["beans","peas","asparagus"]
+colors:
+  - '#F1C40F'
+  - '#F39C12'
+companions:
+  - carrot
+  - beetroot
+  - cabbage
+  - lettuce
+avoid:
+  - beans
+  - peas
+  - asparagus
 illustration: onion.svg
+description: >-
+  The ubiquitous culinary bulb. Offers a pungent aroma and forms the base of
+  countless recipes globally.
+description_fr: >-
+  Légume-bulbe aromatique fondamental, base indispensable des saveurs pour les
+  soupes, ragoûts et rôtis.
 ---
-
-The ubiquitous culinary bulb. Offers a pungent aroma and forms the base of countless recipes globally.

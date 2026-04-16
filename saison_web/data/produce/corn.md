@@ -9,9 +9,9 @@ season_end: 9
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#F4D03F","#F1C40F"]
-companions: ["beans","pumpkin","potato","zucchini"]
-avoid: ["tomato","celery"]
+colors: ['#F4D03F', '#F1C40F']
+companions: ['beans', 'pumpkin', 'potato', 'zucchini']
+avoid: ['tomato', 'celery']
 illustration: corn.svg
 ---
 

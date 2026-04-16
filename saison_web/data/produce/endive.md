@@ -9,8 +9,8 @@ season_end: 3
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#FEF9E7","#F4D03F"]
-companions: ["radish","carrot"]
+colors: ['#FEF9E7', '#F4D03F']
+companions: ['radish', 'carrot']
 avoid: []
 illustration: endive.svg
 ---

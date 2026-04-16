@@ -9,8 +9,8 @@ season_end: 9
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#5B2C6F","#4A235A"]
-companions: ["beans","spinach","thyme"]
+colors: ['#5B2C6F', '#4A235A']
+companions: ['beans', 'spinach', 'thyme']
 avoid: []
 illustration: eggplant.svg
 ---

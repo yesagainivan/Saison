@@ -9,8 +9,8 @@ season_end: 4
 planting_start: 3
 planting_end: 5
 hemisphere: northern
-colors: ["#F1948A","#EC7063"]
-companions: ["mint","rosemary"]
+colors: ['#F1948A', '#EC7063']
+companions: ['mint', 'rosemary']
 avoid: []
 illustration: grapefruit.svg
 ---

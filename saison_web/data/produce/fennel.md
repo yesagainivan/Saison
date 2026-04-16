@@ -9,9 +9,9 @@ season_end: 10
 planting_start: 4
 planting_end: 6
 hemisphere: northern
-colors: ["#D4E157","#AED581"]
+colors: ['#D4E157', '#AED581']
 companions: []
-avoid: ["tomato","beans","coriander","kohlrabi"]
+avoid: ['tomato', 'beans', 'coriander', 'kohlrabi']
 illustration: fennel.svg
 ---
 

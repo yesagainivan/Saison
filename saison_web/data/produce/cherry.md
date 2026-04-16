@@ -9,8 +9,8 @@ season_end: 7
 planting_start: 11
 planting_end: 3
 hemisphere: northern
-colors: ["#922B21","#7B241C"]
-companions: ["chives","dandelion"]
+colors: ['#922B21', '#7B241C']
+companions: ['chives', 'dandelion']
 avoid: []
 illustration: cherry.svg
 ---

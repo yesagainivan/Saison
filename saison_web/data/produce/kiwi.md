@@ -9,8 +9,8 @@ season_end: 5
 planting_start: 3
 planting_end: 4
 hemisphere: northern
-colors: ["#7D6608","#514105"]
-companions: ["blueberry"]
+colors: ['#7D6608', '#514105']
+companions: ['blueberry']
 avoid: []
 illustration: kiwi.svg
 ---

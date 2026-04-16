@@ -9,8 +9,8 @@ season_end: 6
 planting_start: 3
 planting_end: 4
 hemisphere: northern
-colors: ["#C0392B","#27AE60"]
-companions: ["cabbage","broccoli","kale"]
+colors: ['#C0392B', '#27AE60']
+companions: ['cabbage', 'broccoli', 'kale']
 avoid: []
 illustration: rhubarb.svg
 ---

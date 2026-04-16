@@ -9,10 +9,15 @@ season_end: 12
 planting_start: 6
 planting_end: 7
 hemisphere: northern
-colors: ["#F7DC6F","#F1C40F"]
-companions: ["peas"]
+colors:
+  - '#F7DC6F'
+  - '#F1C40F'
+companions:
+  - peas
 avoid: []
 illustration: rutabaga.svg
+description: A dense root cross between a cabbage and a turnip. Excels in roasting.
+description_fr: >-
+  Une racine d'hiver consistante et rustique, croisement naturel entre un navet
+  et un chou.
 ---
-
-A dense root cross between a cabbage and a turnip. Excels in roasting.

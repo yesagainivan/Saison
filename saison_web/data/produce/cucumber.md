@@ -9,9 +9,9 @@ season_end: 9
 planting_start: 5
 planting_end: 6
 hemisphere: northern
-colors: ["#7DCEA0","#52BE80"]
-companions: ["corn","beans","radish"]
-avoid: ["potato","sage"]
+colors: ['#7DCEA0', '#52BE80']
+companions: ['corn', 'beans', 'radish']
+avoid: ['potato', 'sage']
 illustration: cucumber.svg
 ---
 

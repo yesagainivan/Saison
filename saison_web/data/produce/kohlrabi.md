@@ -9,9 +9,9 @@ season_end: 10
 planting_start: 4
 planting_end: 5
 hemisphere: northern
-colors: ["#A9DFBF","#8E44AD"]
-companions: ["onion","beetroot"]
-avoid: ["tomato","strawberry","fennel"]
+colors: ['#A9DFBF', '#8E44AD']
+companions: ['onion', 'beetroot']
+avoid: ['tomato', 'strawberry', 'fennel']
 illustration: kohlrabi.svg
 ---
 

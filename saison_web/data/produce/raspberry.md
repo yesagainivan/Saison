@@ -9,10 +9,21 @@ season_end: 9
 planting_start: 3
 planting_end: 4
 hemisphere: northern
-colors: ["#E91E63","#C2185B"]
-companions: ["garlic","chives"]
-avoid: ["potato","tomato","eggplant"]
+colors:
+  - '#E91E63'
+  - '#C2185B'
+companions:
+  - garlic
+  - chives
+avoid:
+  - potato
+  - tomato
+  - eggplant
 illustration: raspberry.svg
+description: >-
+  An aggregate fruit radiating brilliant colour and complex, tarty notes on
+  thorny canes.
+description_fr: >-
+  Délicate et intensément parfumée, la framboise est un véritable trésor estival
+  des jardins.
 ---
-
-An aggregate fruit radiating brilliant colour and complex, tarty notes on thorny canes.
