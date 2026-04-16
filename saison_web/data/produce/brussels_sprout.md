@@ -1,6 +1,7 @@
 ---
 id: brussels_sprout
 name: Brussels Sprout
+name_fr: Chou de Bruxelles
 category: vegetable
 featured: false
 season_start: 9

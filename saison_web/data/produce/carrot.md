@@ -1,6 +1,7 @@
 ---
 id: carrot
 name: Carrot
+name_fr: Carotte
 category: vegetable
 featured: false
 season_start: 6

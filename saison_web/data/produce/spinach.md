@@ -1,6 +1,7 @@
 ---
 id: spinach
 name: Spinach
+name_fr: Épinards
 category: vegetable
 featured: false
 season_start: 4

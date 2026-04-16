@@ -1,6 +1,7 @@
 ---
 id: beetroot
 name: Beetroot
+name_fr: Betterave
 category: vegetable
 featured: false
 season_start: 6

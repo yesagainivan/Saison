@@ -1,6 +1,7 @@
 ---
 id: rutabaga
 name: Rutabaga
+name_fr: Rutabaga
 category: vegetable
 featured: false
 season_start: 10

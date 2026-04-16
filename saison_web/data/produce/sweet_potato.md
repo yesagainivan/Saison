@@ -1,6 +1,7 @@
 ---
 id: sweet_potato
 name: Sweet Potato
+name_fr: Patate douce
 category: vegetable
 featured: false
 season_start: 9

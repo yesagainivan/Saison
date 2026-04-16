@@ -1,6 +1,7 @@
 ---
 id: bell_pepper
 name: Bell Pepper
+name_fr: Poivron
 category: vegetable
 featured: false
 season_start: 7

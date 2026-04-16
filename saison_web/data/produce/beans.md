@@ -1,6 +1,7 @@
 ---
 id: beans
 name: Beans
+name_fr: Haricots
 category: vegetable
 featured: false
 season_start: 7

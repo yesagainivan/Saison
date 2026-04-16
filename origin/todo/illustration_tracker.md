@@ -3,8 +3,8 @@
 We are following a **Botanical Modernism** aesthetic: 100x100 viewBox, `stroke-width="2"`, `fill="none"`, using clean mathematical paths.
 
 ## Status Summary
-- **Total Items**: 50
-- **Completed**: 50 (Added Final: Celery, Kohlrabi, Oregano, Parsnip, Rosemary, Rutabaga, Sage, Sweet Potato, Turnip)
+- **Total Items**: 60
+- **Completed**: 60
 - **In Progress**: 0
 - **Remaining**: 0
 
@@ -83,6 +83,20 @@ We are following a **Botanical Modernism** aesthetic: 100x100 viewBox, `stroke-w
 
 ---
 
+## 📦 Batch 8: French Terroir
+- [x] **Shallot** (`shallot.md`) - `shallot.svg`
+- [x] **White Asparagus** (`white_asparagus.md`) - `white_asparagus.svg`
+- [x] **Endive** (`endive.md`) - `endive.svg`
+- [x] **Sorrel** (`sorrel.md`) - `sorrel.svg`
+- [x] **Tarragon** (`tarragon.md`) - `tarragon.svg`
+- [x] **Chervil** (`chervil.md`) - `chervil.svg`
+- [x] **Salsify** (`salsify.md`) - `salsify.svg`
+- [x] **Cardoon** (`cardoon.md`) - `cardoon.svg`
+- [x] **Swiss Chard** (`swiss_chard.md`) - `swiss_chard.svg`
+- [x] **Mirabelle Plum** (`mirabelle.md`) - `mirabelle.svg`
+
+---
+
 ## 📋 Full Inventory
 
 ### Completed / Existing
@@ -93,4 +107,5 @@ We are following a **Botanical Modernism** aesthetic: 100x100 viewBox, `stroke-w
 - [x] **Tomato** (`tomato.svg`)
 
 ### Remaining
-- NONE. ALL 50 ITEMS COMPLETED. 🚀
+- NONE. ALL 60 ITEMS COMPLETED. 🚀
+

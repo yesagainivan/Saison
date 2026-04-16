@@ -1,6 +1,7 @@
 ---
 id: chives
 name: Chives
+name_fr: Ciboulette
 category: herb
 featured: false
 season_start: 5

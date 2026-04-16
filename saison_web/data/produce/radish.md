@@ -1,6 +1,7 @@
 ---
 id: radish
 name: Radish
+name_fr: Radis
 category: vegetable
 featured: false
 season_start: 4

@@ -1,6 +1,7 @@
 ---
 id: onion
 name: Onion
+name_fr: Oignon
 category: vegetable
 featured: false
 season_start: 6

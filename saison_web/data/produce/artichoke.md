@@ -1,6 +1,7 @@
 ---
 id: artichoke
 name: Artichoke
+name_fr: Artichaut
 category: vegetable
 featured: false
 season_start: 5

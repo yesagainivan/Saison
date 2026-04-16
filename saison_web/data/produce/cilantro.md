@@ -1,6 +1,7 @@
 ---
 id: cilantro
 name: Cilantro
+name_fr: Coriandre
 category: herb
 featured: false
 season_start: 5

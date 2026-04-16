@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Outer Shape (Bullet) -->
+  <path d="M50 90 C30 90, 25 70, 25 50 C25 30, 35 10, 50 10 C65 10, 75 30, 75 50 C75 70, 70 90, 50 90 Z" />
+  <!-- Leaf Layers -->
+  <path d="M40 90 C35 70, 35 40, 50 10" />
+  <path d="M60 90 C65 70, 65 40, 50 10" />
+  <path d="M50 90 V10" />
+  <!-- Layer curves -->
+  <path d="M30 60 Q40 55, 50 60" />
+  <path d="M70 60 Q60 55, 50 60" />
+</svg>

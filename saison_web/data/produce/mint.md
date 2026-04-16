@@ -1,6 +1,7 @@
 ---
 id: mint
 name: Mint
+name_fr: Menthe
 category: herb
 featured: false
 season_start: 5

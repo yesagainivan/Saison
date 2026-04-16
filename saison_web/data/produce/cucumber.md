@@ -1,6 +1,7 @@
 ---
 id: cucumber
 name: Cucumber
+name_fr: Concombre
 category: vegetable
 featured: false
 season_start: 7

@@ -1,6 +1,7 @@
 ---
 id: strawberry
 name: Strawberry
+name_fr: Fraise
 category: fruit
 featured: false
 season_start: 5

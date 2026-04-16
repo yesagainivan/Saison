@@ -1,6 +1,7 @@
 ---
 id: broccoli
 name: Broccoli
+name_fr: Brocoli
 category: vegetable
 featured: false
 season_start: 6

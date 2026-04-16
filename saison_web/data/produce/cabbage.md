@@ -1,6 +1,7 @@
 ---
 id: cabbage
 name: Cabbage
+name_fr: Chou
 category: vegetable
 featured: false
 season_start: 7

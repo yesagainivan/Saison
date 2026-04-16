@@ -1,6 +1,7 @@
 ---
 id: lettuce
 name: Lettuce
+name_fr: Laitue
 category: vegetable
 featured: false
 season_start: 5

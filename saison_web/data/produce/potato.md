@@ -1,6 +1,7 @@
 ---
 id: potato
 name: Potato
+name_fr: Pomme de terre
 category: vegetable
 featured: false
 season_start: 7

@@ -1,6 +1,7 @@
 ---
 id: corn
 name: Corn
+name_fr: Maïs
 category: vegetable
 featured: false
 season_start: 7

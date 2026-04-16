@@ -1,6 +1,7 @@
 ---
 id: hot_pepper
 name: Hot Pepper
+name_fr: Piment
 category: vegetable
 featured: false
 season_start: 8

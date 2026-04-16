@@ -1,6 +1,7 @@
 ---
 id: fennel
 name: Fennel
+name_fr: Fenouil
 category: herb
 featured: false
 season_start: 6

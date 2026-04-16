@@ -1,6 +1,7 @@
 ---
 id: melon
 name: Melon
+name_fr: Melon
 category: fruit
 featured: false
 season_start: 7

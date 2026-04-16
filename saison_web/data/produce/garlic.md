@@ -1,6 +1,7 @@
 ---
 id: garlic
 name: Garlic
+name_fr: Ail
 category: herb
 featured: false
 season_start: 6

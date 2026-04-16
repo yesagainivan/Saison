@@ -1,6 +1,7 @@
 ---
 id: dill
 name: Dill
+name_fr: Aneth
 category: herb
 featured: false
 season_start: 6

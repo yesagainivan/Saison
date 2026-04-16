@@ -1,6 +1,7 @@
 ---
 id: celery
 name: Celery
+name_fr: Céleri
 category: vegetable
 featured: false
 season_start: 8

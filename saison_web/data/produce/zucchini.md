@@ -1,6 +1,7 @@
 ---
 id: zucchini
 name: Zucchini
+name_fr: Courgette
 category: vegetable
 featured: false
 season_start: 7

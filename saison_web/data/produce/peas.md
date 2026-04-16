@@ -1,6 +1,7 @@
 ---
 id: peas
 name: Peas
+name_fr: Petits pois
 category: vegetable
 featured: false
 season_start: 5

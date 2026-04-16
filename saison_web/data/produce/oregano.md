@@ -1,6 +1,7 @@
 ---
 id: oregano
 name: Oregano
+name_fr: Origan
 category: herb
 featured: false
 season_start: 6

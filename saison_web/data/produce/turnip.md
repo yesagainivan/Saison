@@ -1,6 +1,7 @@
 ---
 id: turnip
 name: Turnip
+name_fr: Navet
 category: vegetable
 featured: false
 season_start: 9

@@ -1,6 +1,7 @@
 ---
 id: parsnip
 name: Parsnip
+name_fr: Panais
 category: vegetable
 featured: false
 season_start: 10

@@ -1,6 +1,7 @@
 ---
 id: kohlrabi
 name: Kohlrabi
+name_fr: Chou-rave
 category: vegetable
 featured: false
 season_start: 6

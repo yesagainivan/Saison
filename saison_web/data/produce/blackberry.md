@@ -1,6 +1,7 @@
 ---
 id: blackberry
 name: Blackberry
+name_fr: Mûre
 category: fruit
 featured: false
 season_start: 7

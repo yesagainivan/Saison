@@ -1,6 +1,7 @@
 ---
 id: watermelon
 name: Watermelon
+name_fr: Pastèque
 category: fruit
 featured: false
 season_start: 7

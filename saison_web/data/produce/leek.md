@@ -1,6 +1,7 @@
 ---
 id: leek
 name: Leek
+name_fr: Poireau
 category: vegetable
 featured: false
 season_start: 9

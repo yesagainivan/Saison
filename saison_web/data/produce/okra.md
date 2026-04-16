@@ -1,6 +1,7 @@
 ---
 id: okra
 name: Okra
+name_fr: Gombo
 category: vegetable
 featured: false
 season_start: 7

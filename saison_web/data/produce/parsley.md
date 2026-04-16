@@ -1,6 +1,7 @@
 ---
 id: parsley
 name: Parsley
+name_fr: Persil
 category: herb
 featured: false
 season_start: 6

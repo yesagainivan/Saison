@@ -1,6 +1,7 @@
 ---
 id: cauliflower
 name: Cauliflower
+name_fr: Chou-fleur
 category: vegetable
 featured: false
 season_start: 7

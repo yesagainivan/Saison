@@ -1,6 +1,7 @@
 ---
 id: rosemary
 name: Rosemary
+name_fr: Romarin
 category: herb
 featured: false
 season_start: 1

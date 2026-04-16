@@ -1,6 +1,7 @@
 ---
 id: sage
 name: Sage
+name_fr: Sauge
 category: herb
 featured: false
 season_start: 5

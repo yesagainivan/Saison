@@ -1,6 +1,7 @@
 ---
 id: eggplant
 name: Eggplant
+name_fr: Aubergine
 category: vegetable
 featured: false
 season_start: 7

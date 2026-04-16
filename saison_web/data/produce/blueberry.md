@@ -1,6 +1,7 @@
 ---
 id: blueberry
 name: Blueberry
+name_fr: Myrtille
 category: fruit
 featured: false
 season_start: 7

@@ -1,6 +1,7 @@
 ---
 id: raspberry
 name: Raspberry
+name_fr: Framboise
 category: fruit
 featured: false
 season_start: 7
