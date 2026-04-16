@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#27AE60","#1E8449"]
 companions: ["strawberry","cabbage","eggplant"]
 avoid: []
-illustration: default.svg
+illustration: spinach.svg
 ---
 
 A dark leafy green loaded with iron and nutrients. Best grown in cooler shoulders of the season.

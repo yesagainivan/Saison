@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#ADEFD1","#00203F"]
 companions: ["beans","tomato"]
 avoid: ["fennel"]
-illustration: default.svg
+illustration: cilantro.svg
 ---
 
 Every piece of this leafy annual is thoroughly edible. Imparts a bright, citrusy (or soapy) taste.

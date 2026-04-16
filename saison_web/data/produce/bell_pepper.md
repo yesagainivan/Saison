@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#E74C3C","#F1C40F"]
 companions: ["basil","onion","spinach","carrot"]
 avoid: ["beans"]
-illustration: default.svg
+illustration: bell_pepper.svg
 ---
 
 Mild, sweet capsicum fruits known for brightening up culinary visual palettes.

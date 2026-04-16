@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#C0392B","#922B21"]
 companions: ["basil","onion","carrot"]
 avoid: ["beans"]
-illustration: default.svg
+illustration: hot_pepper.svg
 ---
 
 Fiery capsicums packed with capsaicin, injecting intense heat into any dish.

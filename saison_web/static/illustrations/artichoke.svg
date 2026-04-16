@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Strong Sturdy Vertical Stem -->
+  <path d="M50 95 V70" />
+  <!-- Overlapping Scales (Bracts) forming the head -->
+  <!-- Bottom Layer -->
+  <path d="M50 85 C30 85, 20 75, 20 60 Q35 55, 50 60 Q65 55, 80 60 C80 75, 70 85, 50 85 Z" />
+  <!-- Middle Layer -->
+  <path d="M50 70 C35 70, 25 60, 25 45 Q35 40, 50 45 Q65 40, 75 45 C75 60, 65 70, 50 70 Z" />
+  <!-- Top Layer -->
+  <path d="M50 50 C40 50, 35 40, 35 30 Q42 25, 50 30 Q58 25, 65 30 C65 40, 60 50, 50 50 Z" />
+  <!-- Tip of Artichoke -->
+  <path d="M50 30 L50 20" />
+</svg>

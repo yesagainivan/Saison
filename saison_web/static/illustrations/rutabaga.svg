@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Large, earthy and round sphere -->
+  <path d="M50 85 C20 85, 12 60, 12 45 C12 35, 30 25, 50 25 C70 25, 88 35, 88 45 C88 60, 80 85, 50 85 Z" />
+  <!-- Textured neck -->
+  <path d="M40 25 V15 Q50 12, 60 15 V25" />
+  <path d="M42 20 H58" stroke-width="1" />
+  <!-- Upward-growing leaves -->
+  <path d="M45 15 C35 5, 20 10, 30 0" />
+  <path d="M55 15 C65 5, 80 10, 70 0" />
+  <!-- Taproot tail -->
+  <path d="M50 85 C50 95, 45 99, 40 99" />
+</svg>

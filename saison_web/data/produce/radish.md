@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#E74C3C","#C0392B"]
 companions: ["beans","carrot","cucumber","lettuce"]
 avoid: ["hyssop"]
-illustration: default.svg
+illustration: radish.svg
 ---
 
 A fast-growing, edible root vegetable known for its crisp texture and peppery, sharp bite.

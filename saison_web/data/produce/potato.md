@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#D4AC0D","#B9770E"]
 companions: ["corn","cabbage","beans"]
 avoid: ["tomato","cucumber","pumpkin","squash"]
-illustration: default.svg
+illustration: potato.svg
 ---
 
 A versatile starchy tuber deeply integrated into global dietary staples. Highly productive.

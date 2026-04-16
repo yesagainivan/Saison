@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Irregular organic tuber shape (tapered ends) -->
+  <path d="M10 50 C10 30, 30 20, 50 15 C75 10, 95 35, 90 55 C85 80, 60 90, 45 85 C25 80, 10 70, 10 50 Z" />
+  <!-- Surface texture/eyes -->
+  <path d="M30 35 L32 36" stroke-width="2" />
+  <path d="M65 25 L67 26" stroke-width="2" />
+  <path d="M50 50 L52 52" stroke-width="2" />
+  <path d="M75 65 L77 66" stroke-width="2" />
+  <path d="M25 65 L27 66" stroke-width="2" />
+  <!-- Vine foliage elements -->
+  <path d="M50 15 Q40 5, 30 10" />
+  <path d="M55 12 Q65 0, 75 5" />
+</svg>

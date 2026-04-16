@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#A3E4D7","#76D7C4"]
 companions: ["tomato","basil","beans","carrot"]
 avoid: []
-illustration: default.svg
+illustration: oregano.svg
 ---
 
 A staple culinary herb with a bold, earthy pungency prominent in Mediterranean diets.

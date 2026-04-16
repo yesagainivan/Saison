@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Large Bulbous Base (The Bulb) -->
+  <path d="M50 95 C30 95, 20 80, 20 65 C20 50, 35 40, 50 40 C65 40, 80 50, 80 65 C80 80, 70 95, 50 95 Z" />
+  <!-- Overlapping Bulb Layers -->
+  <path d="M35 45 Q50 38, 65 45" />
+  <path d="M30 65 Q50 58, 70 65" />
+  <path d="M40 85 Q50 78, 60 85" />
+  <!-- Feathery Fronds at the top -->
+  <path d="M45 40 Q40 25, 30 15 M30 15 L25 5 M30 15 L35 5" stroke-width="1" />
+  <path d="M55 40 Q60 25, 70 15 M70 15 L65 5 M70 15 L75 5" stroke-width="1" />
+  <path d="M50 40 V10 M50 10 L45 0 M50 10 L55 0" stroke-width="1" />
+</svg>

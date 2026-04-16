@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#2ECC71","#1D8348"]
 companions: ["tomato","cabbage"]
 avoid: ["parsley"]
-illustration: default.svg
+illustration: mint.svg
 ---
 
 A tremendously aggressive and fragrant herb used to cool logic and beverages alike.

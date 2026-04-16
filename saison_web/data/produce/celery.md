@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#A9DFBF","#7DCEA0"]
 companions: ["leek","tomato","cabbage"]
 avoid: ["corn"]
-illustration: default.svg
+illustration: celery.svg
 ---
 
 A marshland plant cultivated for its crisp, fibrous stalks.

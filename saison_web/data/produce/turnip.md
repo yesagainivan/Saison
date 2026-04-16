@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#F5EEF8","#D2B4DE"]
 companions: ["peas"]
 avoid: ["potato"]
-illustration: default.svg
+illustration: turnip.svg
 ---
 
 A hardy root vegetable famous for seeing agrarian populations through harsh winters.

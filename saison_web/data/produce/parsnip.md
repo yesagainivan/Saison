@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#FCF3CF","#F9E79F"]
 companions: ["onion","peas","potato"]
 avoid: ["carrot","celery"]
-illustration: default.svg
+illustration: parsnip.svg
 ---
 
 A pale, sweet taproot closely related to the carrot. Sweetens significantly post-frost.

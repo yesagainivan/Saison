@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#28B463","#239B56"]
 companions: ["tomato","asparagus","carrot"]
 avoid: ["lettuce"]
-illustration: default.svg
+illustration: parsley.svg
 ---
 
 A bright, fresh-tasting biennial plant frequently used as a garnish or flavor enhancer.

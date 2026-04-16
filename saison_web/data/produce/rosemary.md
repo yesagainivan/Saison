@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#5F6A6A","#797D7F"]
 companions: ["cabbage","beans","carrot"]
 avoid: []
-illustration: default.svg
+illustration: rosemary.svg
 ---
 
 A woody, perennial herb with fragrant, evergreen, needle-like leaves.

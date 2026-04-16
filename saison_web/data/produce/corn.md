@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#F4D03F","#F1C40F"]
 companions: ["beans","pumpkin","potato","zucchini"]
 avoid: ["tomato","celery"]
-illustration: default.svg
+illustration: corn.svg
 ---
 
 A tall cereal grass producing golden kernels. The structural anchor of the 'Three Sisters' guild.

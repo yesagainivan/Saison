@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#F5B041","#EB984E"]
 companions: ["corn"]
 avoid: ["potato"]
-illustration: default.svg
+illustration: melon.svg
 ---
 
 A heavy, sweet vining fruit heavily dependent upon hot summer sunlight.

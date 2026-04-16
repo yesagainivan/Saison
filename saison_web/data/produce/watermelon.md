@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#2ECC71","#E74C3C"]
 companions: ["corn","radish"]
 avoid: ["potato","zucchini"]
-illustration: default.svg
+illustration: watermelon.svg
 ---
 
 An iconic, heavily hydrating summer staple wrapped in a striped green rind.

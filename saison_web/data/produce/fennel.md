@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#D4E157","#AED581"]
 companions: []
 avoid: ["tomato","beans","coriander","kohlrabi"]
-illustration: default.svg
+illustration: fennel.svg
 ---
 
 A highly aromatic, anise-flavoured herb. A notoriously terrible companion for most garden vegetables.

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#17202A","#2C3E50"]
 companions: ["mint"]
 avoid: []
-illustration: default.svg
+illustration: blackberry.svg
 ---
 
 A bramble fruit demanding space and respect, delivering intense, dark jammy flavors.

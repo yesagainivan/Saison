@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#7DCEA0","#A9DFBF"]
 companions: ["peas","cabbage"]
 avoid: []
-illustration: default.svg
+illustration: artichoke.svg
 ---
 
 A striking, sculptural thistle cultivated prominently as a delicacy.

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#2ECC71","#28B463"]
 companions: ["potato","onion","rosemary"]
 avoid: ["tomato","strawberry"]
-illustration: default.svg
+illustration: broccoli.svg
 ---
 
 An edible green plant in the cabbage family whose large flowering head is eaten as a vegetable.

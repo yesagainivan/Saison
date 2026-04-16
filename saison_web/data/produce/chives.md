@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#E1BEE7","#CE93D8"]
 companions: ["carrot","tomato","rosemary"]
 avoid: ["beans","peas"]
-illustration: default.svg
+illustration: chives.svg
 ---
 
 A visually striking flowering herb lending a sharp onion/garlic accent.

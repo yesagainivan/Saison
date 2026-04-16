@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Tapered root (thicker crown) -->
+  <path d="M35 25 Q50 20, 65 25 L53 95 L47 95 Z" />
+  <!-- Horizontal texture lines -->
+  <path d="M40 40 Q50 38, 60 40" stroke-width="1" />
+  <path d="M42 55 Q50 53, 58 55" stroke-width="1" />
+  <path d="M45 70 Q50 68, 55 70" stroke-width="1" />
+  <!-- Broad, serrated foliage -->
+  <path d="M50 22 C30 15, 15 5, 25 2" />
+  <path d="M50 22 C50 5, 60 0, 55 0" />
+  <path d="M50 22 C70 15, 85 5, 75 2" />
+</svg>

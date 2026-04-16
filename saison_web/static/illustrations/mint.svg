@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Square Stem -->
+  <path d="M50 95 V5" />
+  <!-- Opposite Serrated Leaves -->
+  <path d="M50 80 C30 85, 15 70, 20 60 C25 50, 50 60, 50 60" />
+  <path d="M50 80 C70 85, 85 70, 80 60 C75 50, 50 60, 50 60" />
+  <path d="M50 45 C30 50, 15 35, 20 25 C25 15, 50 25, 50 25" />
+  <path d="M50 45 C70 50, 85 35, 80 25 C75 15, 50 25, 50 25" />
+  <!-- Leaf Veins -->
+  <path d="M35 70 L45 65" stroke-width="1" />
+  <path d="M65 70 L55 65" stroke-width="1" />
+  <path d="M35 35 L45 30" stroke-width="1" />
+  <path d="M65 35 L55 30" stroke-width="1" />
+</svg>

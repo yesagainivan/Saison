@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#D4E157","#AED581"]
 companions: ["cabbage","onion","lettuce"]
 avoid: ["carrot","tomato"]
-illustration: default.svg
+illustration: dill.svg
 ---
 
 An annual herb boasting incredibly fine, wispy foliage and distinct aromatic qualities.

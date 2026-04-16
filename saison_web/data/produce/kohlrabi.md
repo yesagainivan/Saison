@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#A9DFBF","#8E44AD"]
 companions: ["onion","beetroot"]
 avoid: ["tomato","strawberry","fennel"]
-illustration: default.svg
+illustration: kohlrabi.svg
 ---
 
 A bulbous, swollen cabbage stem displaying peculiar, alien-like architecture and crisp flesh.

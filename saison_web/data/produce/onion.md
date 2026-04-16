@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#F1C40F","#F39C12"]
 companions: ["carrot","beetroot","cabbage","lettuce"]
 avoid: ["beans","peas","asparagus"]
-illustration: default.svg
+illustration: onion.svg
 ---
 
 The ubiquitous culinary bulb. Offers a pungent aroma and forms the base of countless recipes globally.

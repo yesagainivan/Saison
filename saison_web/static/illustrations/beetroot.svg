@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The Tuberous Sphere -->
+  <path d="M50 85 C20 85, 10 55, 10 45 C10 35, 30 25, 50 25 C70 25, 90 35, 90 45 C90 55, 80 85, 50 85 Z" />
+  <!-- Soil / Texture skin lines -->
+  <path d="M20 40 Q50 38, 80 40" />
+  <path d="M15 55 Q50 53, 85 55" />
+  <path d="M25 70 Q50 68, 75 70" />
+  <!-- Taproot Tail -->
+  <path d="M50 85 C50 95, 45 99, 40 99" />
+  <!-- Broad Foliage Leaves -->
+  <path d="M35 25 C25 5, 5 15, 20 5 C30 15, 35 25, 35 25" />
+  <path d="M65 25 C75 5, 95 15, 80 5 C70 15, 65 25, 65 25" />
+  <path d="M50 25 C50 5, 40 0, 50 0 C60 0, 50 5, 50 25" />
+</svg>

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#7DCEA0","#52BE80"]
 companions: ["eggplant","potato","rosemary","tomato"]
 avoid: []
-illustration: default.svg
+illustration: thyme.svg
 ---
 
 A delicate, aromatic herb forming dense carpets of flavourful foliage.

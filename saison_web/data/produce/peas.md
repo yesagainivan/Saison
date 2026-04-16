@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#58D68D","#2ECC71"]
 companions: ["carrot","cucumber","corn","radish"]
 avoid: ["onion","garlic"]
-illustration: default.svg
+illustration: peas.svg
 ---
 
 Small spherical seeds grown within pods. They actively fix nitrogen into the surrounding soil.

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#2ECC71","#27AE60"]
 companions: ["sweet_potato","melon","cucumber"]
 avoid: []
-illustration: default.svg
+illustration: okra.svg
 ---
 
 A heat-loving mallow producing edible green seed pods prominent in Creole stews.

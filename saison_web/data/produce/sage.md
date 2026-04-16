@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#85929E","#5D6D7E"]
 companions: ["rosemary","cabbage","carrot"]
 avoid: ["cucumber"]
-illustration: default.svg
+illustration: sage.svg
 ---
 
 An evergreen subshrub with greyish leaves and distinct herbaceous, pine flavour.

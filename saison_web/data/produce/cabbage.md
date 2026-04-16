@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#A9DFBF","#7DCEA0"]
 companions: ["onion","potato","beetroot","spinach"]
 avoid: ["strawberry","tomato"]
-illustration: default.svg
+illustration: cabbage.svg
 ---
 
 A dense, leafy biennial plant grown for its tight vegetative heads. Exceptionally cold hardy.

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#7DCEA0","#52BE80"]
 companions: ["corn","beans","radish"]
 avoid: ["potato","sage"]
-illustration: default.svg
+illustration: cucumber.svg
 ---
 
 A creeping vine plant bringing forth cylindrical, deeply hydrating fruits.

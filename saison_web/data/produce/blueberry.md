@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#2874A6","#1B4F72"]
 companions: ["thyme"]
 avoid: ["tomato"]
-illustration: default.svg
+illustration: blueberry.svg
 ---
 
 Dark indigo spheres of sweetness requiring highly acidic soils to thrive.

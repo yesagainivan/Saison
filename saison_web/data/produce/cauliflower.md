@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#FDFEFE","#F0F3F4"]
 companions: ["beans","onion","celery"]
 avoid: ["tomato","strawberry"]
-illustration: default.svg
+illustration: cauliflower.svg
 ---
 
 A structurally beautiful cruciferous vegetable forming a white floral head.

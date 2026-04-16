@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Structural Stalks -->
+  <path d="M40 95 L42 40" />
+  <path d="M50 95 L50 35" />
+  <path d="M60 95 L58 40" />
+  <!-- Stalk ribs -->
+  <path d="M41 80 Q50 78, 59 80" stroke-width="1" />
+  <path d="M41 60 Q50 58, 59 60" stroke-width="1" />
+  <!-- Branching leaf clusters -->
+  <path d="M42 40 C35 30, 25 35, 30 20" />
+  <path d="M50 35 C50 20, 60 25, 55 10" />
+  <path d="M58 40 C65 30, 75 35, 70 20" />
+  <!-- Small leaves -->
+  <path d="M30 20 Q35 15, 40 20" stroke-width="1" />
+  <path d="M55 10 Q60 5, 65 10" stroke-width="1" />
+  <path d="M70 20 Q75 15, 80 20" stroke-width="1" />
+</svg>

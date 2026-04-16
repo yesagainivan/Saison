@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#229954","#196F3D"]
 companions: ["corn","beans","pumpkin"]
 avoid: ["potato"]
-illustration: default.svg
+illustration: zucchini.svg
 ---
 
 A highly prolific summer squash boasting dark green skin and a mild, versatile flavour.

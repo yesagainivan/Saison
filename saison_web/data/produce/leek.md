@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#EDF7F2","#A9DFBF"]
 companions: ["carrot","celery","onion"]
 avoid: ["beans","peas"]
-illustration: default.svg
+illustration: leek.svg
 ---
 
 A broader, mild relative of the onion forming a thick cylindrical stalk.

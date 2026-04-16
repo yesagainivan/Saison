@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#E74C3C","#C0392B"]
 companions: ["spinach","lettuce","onion"]
 avoid: ["cabbage","broccoli","cauliflower"]
-illustration: default.svg
+illustration: strawberry.svg
 ---
 
 An extensively cultivated red heart fruit appreciated for its phenomenal aroma and sweetness.

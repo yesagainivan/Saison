@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#52BE80","#27AE60"]
 companions: ["potato","onion"]
 avoid: ["tomato","strawberry"]
-illustration: default.svg
+illustration: brussels_sprout.svg
 ---
 
 Tiny cabbages growing proudly on an elongated, sturdy stalk. Peaks after a light frost.

@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#F7DC6F","#F1C40F"]
 companions: ["peas"]
 avoid: []
-illustration: default.svg
+illustration: rutabaga.svg
 ---
 
 A dense root cross between a cabbage and a turnip. Excels in roasting.

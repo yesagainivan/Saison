@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#52BE80","#27AE60"]
 companions: ["corn","pumpkin","cucumber","eggplant","potato"]
 avoid: ["onion","garlic","beetroot"]
-illustration: default.svg
+illustration: beans.svg
 ---
 
 Versatile legumes that can be grown as pole climbers or low bushes. Excellent nitrogen fixers.

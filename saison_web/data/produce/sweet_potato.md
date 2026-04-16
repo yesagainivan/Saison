@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#E67E22","#CA6F1E"]
 companions: ["thyme","oregano"]
 avoid: ["squash"]
-illustration: default.svg
+illustration: sweet_potato.svg
 ---
 
 A sweet-tasting, large starchy root vegetable distinct from the common potato. Thrives in warmer weather.

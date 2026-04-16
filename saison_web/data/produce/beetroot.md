@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#8E44AD","#5B2C6F"]
 companions: ["onion","lettuce","cabbage"]
 avoid: ["mustard","beans"]
-illustration: default.svg
+illustration: beetroot.svg
 ---
 
 An earthy, vibrant taproot portion of the beet plant. Known for its intense garnet colour and sweet profile.

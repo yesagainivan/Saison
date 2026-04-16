@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#5B2C6F","#4A235A"]
 companions: ["beans","spinach","thyme"]
 avoid: []
-illustration: default.svg
+illustration: eggplant.svg
 ---
 
 A heat-loving nightshade notable for its deep purple, glossy skin and spongy flesh.

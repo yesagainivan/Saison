@@ -11,7 +11,7 @@ hemisphere: northern
 colors: ["#A2D9CE","#76D7C4"]
 companions: ["carrot","onion","strawberry","radish"]
 avoid: ["cabbage","celery","parsley"]
-illustration: default.svg
+illustration: lettuce.svg
 ---
 
 The foundation of the modern salad. A delicate, crisp leafy green available in countless varietals.

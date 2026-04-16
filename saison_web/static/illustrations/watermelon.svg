@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Elliptical, Heavy Outer Shape (Oblong) -->
+  <path d="M50 90 C20 90, 10 70, 10 50 C10 30, 20 10, 50 10 C80 10, 90 30, 90 50 C90 70, 80 90, 50 90 Z" />
+  <!-- Irregular, Wavy "Jagged" Stripes for Organic Pattern -->
+  <path d="M30 15 Q25 35, 30 55 Q35 75, 30 85" />
+  <path d="M50 10 Q45 35, 52 50 Q58 65, 50 90" />
+  <path d="M70 15 Q75 35, 70 55 Q65 75, 70 85" />
+  <!-- Delicate, Coiled Vine Tendril -->
+  <path d="M50 10 C45 0, 35 5, 40 10 C45 15, 35 20, 30 15" />
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Climbing Vine -->
+  <path d="M50 95 C55 80, 45 70, 50 55 C55 40, 45 30, 50 15" />
+  <!-- Leaves -->
+  <path d="M52 75 C65 70, 75 80, 52 75" />
+  <path d="M48 55 C35 50, 25 60, 48 55" />
+  <path d="M52 35 C65 30, 75 40, 52 35" />
+  <!-- Dangling Pods -->
+  <path d="M55 70 Q60 85, 58 95" />
+  <path d="M45 50 Q40 65, 42 75" />
+  <path d="M55 30 Q60 45, 58 55" />
+</svg>

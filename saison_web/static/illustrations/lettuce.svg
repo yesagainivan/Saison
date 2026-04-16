@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Central Sprout Basis -->
+  <path d="M50 85 V75" />
+  <!-- Overlapping Wavy Leaves (Head Lettuce Style) -->
+  <path d="M45 85 C20 80, 5 60, 10 40 C15 20, 30 15, 50 15" />
+  <path d="M55 85 C80 80, 95 60, 90 40 C85 20, 70 15, 50 15" />
+  <!-- Internal Leaf Folds -->
+  <path d="M25 45 Q50 35, 75 45" />
+  <path d="M30 65 Q50 55, 70 65" />
+  <path d="M40 30 Q50 20, 60 30" />
+</svg>
