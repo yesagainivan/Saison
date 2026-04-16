@@ -7,6 +7,7 @@
 	import { t } from '$lib/i18n';
 	import { resolve } from '$app/paths';
 	import SearchPalette from '$lib/components/SearchPalette.svelte';
+	import BackgroundEffects from '$lib/components/BackgroundEffects.svelte';
 	import { searchStore } from '$lib/stores/search.svelte';
 
 	let { data, children } = $props();
@@ -87,6 +88,8 @@
 	</nav>
 </header>
 
+<BackgroundEffects />
+
 <main>
 	{@render children()}
 </main>
@@ -102,6 +105,8 @@
 		border-bottom: 1px solid var(--border);
 		padding-bottom: 1rem;
 		transition: border-color var(--dur) ease;
+		position: relative;
+		z-index: 10;
 	}
 
 	.s-logo-group {
@@ -193,5 +198,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding-bottom: 4rem;
+		position: relative;
+		z-index: 1;
 	}
 </style>
