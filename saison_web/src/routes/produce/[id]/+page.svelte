@@ -39,6 +39,13 @@
 			return [];
 		}
 	});
+
+	// Resolve a companion ID to a localised display name
+	function resolveCompanionName(id: string): string {
+		const entry = data.companionMap[id];
+		if (!entry) return id;
+		return appSettings.language === 'fr' && entry.name_fr ? entry.name_fr : entry.name;
+	}
 </script>
 
 <svelte:head>
@@ -132,13 +139,13 @@
 				{#if companions.length > 0}
 					<div class="meta-item">
 						<span class="meta-label">{t('companions')}</span>
-						<span class="meta-value">{companions.join(', ')}</span>
+						<span class="meta-value">{companions.map(resolveCompanionName).join(', ')}</span>
 					</div>
 				{/if}
 				{#if avoid.length > 0}
 					<div class="meta-item">
 						<span class="meta-label">{t('avoid')}</span>
-						<span class="meta-value">{avoid.join(', ')}</span>
+						<span class="meta-value">{avoid.map(resolveCompanionName).join(', ')}</span>
 					</div>
 				{/if}
 			</div>

@@ -3,6 +3,8 @@
 	import CategoryBadge from './CategoryBadge.svelte';
 	import { resolve, asset } from '$app/paths';
 	import { appSettings } from '$lib/stores/settings.svelte';
+	import { fly } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 
 	let { produce, index = 0 }: { produce: Produce; index?: number } = $props();
 
@@ -21,7 +23,7 @@
 	href={resolve(`/produce/${produce.id}`)}
 	class="produce-card"
 	class:featured={produce.featured}
-	style="animation-delay: {index * 40}ms"
+	in:fly={{ y: 12, duration: 320, delay: Math.min(index, 6) * 35, easing: cubicOut }}
 >
 	<div class="swatch-strip" style="background: {swatches[0]}"></div>
 
@@ -69,7 +71,6 @@
 			border-color var(--dur) ease,
 			transform 0.2s ease,
 			box-shadow 0.2s ease;
-		animation: cardIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 	}
 
@@ -143,14 +144,5 @@
 		margin-top: auto;
 	}
 
-	@keyframes cardIn {
-		from {
-			opacity: 0;
-			transform: translateY(10px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+
 </style>
