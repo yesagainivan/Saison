@@ -3,6 +3,7 @@
   import { getSeasonForMonth } from '$lib/types';
   import { setContext } from 'svelte';
   import { page } from '$app/state';
+  import { appSettings } from '$lib/stores/settings.svelte';
 
   let { children } = $props();
 
@@ -10,7 +11,7 @@
   let currentMonth = $state(initialMonth);
 
   // Sync back to URL or just let it stay local, local is fine for the wheel since it's an app-like experience
-  let currentSeason = $derived(getSeasonForMonth(currentMonth));
+  let currentSeason = $derived(getSeasonForMonth(appSettings.transformMonth(currentMonth)));
   
   $effect(() => {
     if (typeof document !== 'undefined') {
