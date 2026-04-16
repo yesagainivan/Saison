@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The Fruit (Apple) -->
+  <path d="M50 25 C30 25, 20 35, 20 55 C20 75, 35 90, 50 90 C65 90, 80 75, 80 55 C80 35, 70 25, 50 25 Z" />
+  <path d="M50 25 C45 22, 55 22, 50 25" />
+  <!-- The Stem -->
+  <path d="M50 25 C50 15, 60 10, 65 5" />
+  <!-- Small Leaf -->
+  <path d="M55 15 C65 10, 75 15, 65 20 C55 25, 50 20, 55 15 Z" />
+</svg>

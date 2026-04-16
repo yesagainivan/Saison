@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Long Stalks (Bundle) -->
+  <path d="M45 95 Q40 50, 30 15" />
+  <path d="M55 95 Q60 50, 70 15" />
+  <!-- Broad Leaves at top -->
+  <path d="M30 15 C20 10, 10 20, 30 15" />
+  <path d="M30 15 C35 5, 45 10, 30 15" />
+  <path d="M70 15 C80 10, 90 20, 70 15" />
+  <path d="M70 15 C65 5, 55 10, 70 15" />
+</svg>

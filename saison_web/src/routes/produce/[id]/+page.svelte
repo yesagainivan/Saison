@@ -19,6 +19,24 @@
 
 	// Calculate if it's featured
 	const isSown = $derived(produce.planting_start != null);
+
+	let companions = $derived.by(() => {
+		if (!produce.companions) return [];
+		try {
+			return JSON.parse(produce.companions as unknown as string) as string[];
+		} catch (e) {
+			return [];
+		}
+	});
+
+	let avoid = $derived.by(() => {
+		if (!produce.avoid) return [];
+		try {
+			return JSON.parse(produce.avoid as unknown as string) as string[];
+		} catch (e) {
+			return [];
+		}
+	});
 </script>
 
 <svelte:head>
@@ -90,20 +108,16 @@
 					<span class="meta-label">Hemisphere</span>
 					<span class="meta-value">{produce.hemisphere}</span>
 				</div>
-				{#if produce.companions}
+				{#if companions.length > 0}
 					<div class="meta-item">
 						<span class="meta-label">Companions</span>
-						<span class="meta-value"
-							>{JSON.parse(produce.companions as unknown as string).join(', ')}</span
-						>
+						<span class="meta-value">{companions.join(', ')}</span>
 					</div>
 				{/if}
-				{#if produce.avoid}
+				{#if avoid.length > 0}
 					<div class="meta-item">
 						<span class="meta-label">Avoid Planting With</span>
-						<span class="meta-value"
-							>{JSON.parse(produce.avoid as unknown as string).join(', ')}</span
-						>
+						<span class="meta-value">{avoid.join(', ')}</span>
 					</div>
 				{/if}
 			</div>

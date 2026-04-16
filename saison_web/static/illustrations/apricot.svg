@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="#2E3540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The Fruit (Apricot) -->
+  <circle cx="50" cy="55" r="30" />
+  <!-- Subtle Groove -->
+  <path d="M50 25 Q48 40, 50 85" stroke-dasharray="2 4" />
+  <!-- Stem -->
+  <path d="M50 25 V15" />
+</svg>
