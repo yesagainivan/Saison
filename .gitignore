@@ -1,5 +1,13 @@
+# Dependencies
 saison_web/node_modules
+
+# SvelteKit
 saison_web/.svelte-kit
+
+# Database
 saison_web/db.sqlite
 saison_web/db.sqlite-wal
 saison_web/db.sqlite-shm
+
+# DS_Store files
+.DS_Store

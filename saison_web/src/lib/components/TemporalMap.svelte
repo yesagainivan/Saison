@@ -1,9 +1,12 @@
 <script lang="ts">
   import { SHORT_MONTHS } from '$lib/types';
+  import { appSettings } from '$lib/stores/settings.svelte';
   
   let { seasonStart, seasonEnd }: { seasonStart: number, seasonEnd: number } = $props();
 
-  const isMonthInSeason = (m: number) => {
+  const isMonthInSeason = (calendarMonth: number) => {
+    const m = appSettings.transformMonth(calendarMonth);
+
     if (seasonStart <= seasonEnd) {
       return m >= seasonStart && m <= seasonEnd;
     } else {

@@ -34,6 +34,7 @@
   <nav class="s-nav">
     <a href="/" class="nav-link" class:active={page.url.pathname === '/' || page.url.pathname.startsWith('/produce')}>Dial</a>
     <a href="/ecosystem" class="nav-link" class:active={page.url.pathname === '/ecosystem'}>Ecosystem</a>
+    <a href="/settings" class="nav-link" class:active={page.url.pathname === '/settings'}>Settings</a>
   </nav>
 </header>
 

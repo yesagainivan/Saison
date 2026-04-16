@@ -37,36 +37,30 @@ The core loop: a beautiful, living calendar that tells you what is in season rig
 - [x] `/` — landing page, defaults to current month, renders category-grouped produce grid
 - [x] `/month/[month]` — same view for any month (1–12)
 - [x] `/produce/[id]` — detail page with Temporal Map, prose, and botanical illustration hero
-- [ ] Seed the database with **50 common fruits and vegetables** (northern hemisphere)
+- [x] Seed the database with **50 common fruits and vegetables** (northern hemisphere)
 - [x] Commission/source basic SVG botanical line drawings for all Phase 1 produce
 
 ---
 
-## Phase 2 — The Gardener's Clock
+## Phase 2 — The Gardener's Clock & Ecosystem
 
-Add the time dimension: when to plant, when to tend, when to harvest.
+Add the time dimension and permaculture layering.
 
-- [ ] Extend YAML schema with `planting_start`, `planting_end`, `harvest_start`, `harvest_end`
-- [ ] Re-seed existing 50 entries with planting and harvesting data
-- [ ] Build `/plan` view: "What should I plant in [month]?"
-  - Toggle between **Sow**, **Tend**, **Harvest** filter modes
-- [ ] Expand `<TemporalMap />` to show three distinct coloured bands (sow / grow / harvest)
+- [x] Extend YAML schema with `planting_start`, `planting_end` (sowing logic)
+- [x] Build filter views: "What should I plant or tend right now?" *(Implemented via Harvest vs Sow pills on the main grid)*
+- [x] Create persistent local state layer so users can track what they have actively planted ("My Garden")
+- [x] Integrate `companions` and `avoid` matrices into the schema
+- [x] Implement the Ecosystem Constellation grid visualizer showing relationships dynamically
 - [ ] Add `zone_offset` logic: UI control to shift all dates by ±N weeks for local climate
 - [ ] Add `hemisphere` toggle (northern / southern) — flips month mapping by 6
 
 ---
 
-## Phase 3 — Herbs, Flowers & Companions
+## Phase 3 — PWA & Offline Access
 
-Expand the living world to companion planting and broader botanical categories.
-
-- [ ] Add **culinary herbs** to the database (basil, thyme, rosemary, coriander, etc.)
-- [ ] Add **companion flowers** (marigold, nasturtium, borage, etc.)
-- [ ] Implement companion planting logic using `companions` and `avoid` fields
-  - `/produce/[id]` detail page shows "Plant with" and "Keep away from" grids
-- [ ] Build `/companions` view: pick a vegetable, see its ideal neighbours
+Take the app into the garden natively.
 - [ ] PWA manifest + service worker: offline mode for use in the garden
-  - Cache current month's data and all detail pages visited
+- [ ] Cache current month's data and all detail pages visited
 
 ---
 

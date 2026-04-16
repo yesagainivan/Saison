@@ -7,6 +7,8 @@
   import type { PageData } from './$types';
   import { garden } from '$lib/stores/garden.svelte';
 
+  import { appSettings } from '$lib/stores/settings.svelte';
+
   let { data }: { data: PageData } = $props();
 
   const monthContext = getContext<{ month: number }>('currentMonth');
@@ -15,7 +17,8 @@
   let currentFilter = $state<'peak' | 'sow' | 'garden'>('peak');
 
   let filteredProduce = $derived.by(() => {
-    const m = monthContext.month;
+    const m = appSettings.transformMonth(monthContext.month);
+    
     return data.produce.filter((p: Produce) => {
       // My Garden filter ignores the month constraint and shows everything in garden
       if (currentFilter === 'garden') {
