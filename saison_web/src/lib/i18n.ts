@@ -128,6 +128,18 @@ export const UI_STRINGS = {
 	french: {
 		en: 'French',
 		fr: 'Français'
+	},
+	search: {
+		en: 'Search',
+		fr: 'Recherche'
+	},
+	search_placeholder: {
+		en: 'Find any produce...',
+		fr: 'Rechercher un produit...'
+	},
+	no_results: {
+		en: 'No results for',
+		fr: 'Aucun résultat pour'
 	}
 };
 
