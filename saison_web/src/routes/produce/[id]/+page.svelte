@@ -8,16 +8,6 @@
   let { data }: { data: PageData } = $props();
   let produce = $derived(data.produce);
 
-  // We want the detail page to reflect the styling of the peak season
-  // of the produce item, rather than the current month.
-  let peakSeason = $derived(getSeasonForMonth(produce.season_start));
-
-  $effect(() => {
-    if (typeof document !== 'undefined') {
-      document.body.setAttribute('data-season', peakSeason);
-    }
-  });
-
   let swatches = $derived.by(() => {
     if (!produce.colors) return ['#cccccc'];
     try {
@@ -34,6 +24,12 @@
 <svelte:head>
   <title>Saison - {produce.name}</title>
 </svelte:head>
+
+<div class="top-actions">
+  <button class="back-link" aria-label="Go back" onclick={() => window.history.length > 2 ? window.history.back() : window.location.href = '/'}>
+    ← Back
+  </button>
+</div>
 
 <article class="detail-view">
   <div class="swatch-strip" style="background: {swatches[0]}"></div>
@@ -103,9 +99,7 @@
     </div>
   </div>
   
-  <div class="back-nav">
-    <a href="/" class="back-link">← Return to Season Wheel</a>
-  </div>
+
 </article>
 
 <style>
@@ -247,22 +241,29 @@
     color: var(--text);
   }
 
-  .back-nav {
-    padding: 1.5rem 3rem 3rem;
+  .top-actions {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0 1rem;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .back-link {
+    cursor: pointer;
+    background: transparent;
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.2rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 0.875rem;
-    color: var(--text);
-    transition: background-color 0.2s;
+    color: var(--text-muted);
+    transition: all 0.2s;
   }
 
   .back-link:hover {
-    background-color: var(--bg-card);
+    background-color: var(--bg-surface);
+    color: var(--text);
   }
 
   @media (max-width: 768px) {

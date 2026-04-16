@@ -8,25 +8,24 @@
   import { garden } from '$lib/stores/garden.svelte';
 
   import { appSettings } from '$lib/stores/settings.svelte';
+  import { ui } from '$lib/stores/ui.svelte';
 
   let { data }: { data: PageData } = $props();
 
   const monthContext = getContext<{ month: number }>('currentMonth');
   const getSeason = getContext<() => string>('currentSeason');
 
-  let currentFilter = $state<'peak' | 'sow' | 'garden'>('peak');
-
   let filteredProduce = $derived.by(() => {
     const m = appSettings.transformMonth(monthContext.month);
     
     return data.produce.filter((p: Produce) => {
       // My Garden filter ignores the month constraint and shows everything in garden
-      if (currentFilter === 'garden') {
+      if (ui.gridFilter === 'garden') {
         return garden.has(p.id);
       }
       
       // Sowing filter checks planting dates
-      if (currentFilter === 'sow') {
+      if (ui.gridFilter === 'sow') {
         if (p.planting_start == null || p.planting_end == null) return false;
         if (p.planting_start <= p.planting_end) {
           return m >= p.planting_start && m <= p.planting_end;
@@ -62,9 +61,9 @@
     <div class="header-left">
       <h2 class="grid-title">{MONTHS[monthContext.month - 1]}</h2>
       <div class="filter-pills">
-        <button class="pill" class:active={currentFilter === 'peak'} onclick={() => currentFilter = 'peak'}>Harvesting</button>
-        <button class="pill" class:active={currentFilter === 'sow'} onclick={() => currentFilter = 'sow'}>Sowing</button>
-        <button class="pill" class:active={currentFilter === 'garden'} onclick={() => currentFilter = 'garden'}>My Garden</button>
+        <button class="pill" class:active={ui.gridFilter === 'peak'} onclick={() => ui.gridFilter = 'peak'}>Harvesting</button>
+        <button class="pill" class:active={ui.gridFilter === 'sow'} onclick={() => ui.gridFilter = 'sow'}>Sowing</button>
+        <button class="pill" class:active={ui.gridFilter === 'garden'} onclick={() => ui.gridFilter = 'garden'}>My Garden</button>
       </div>
     </div>
     <span class="grid-count">{filteredProduce.length} items</span>
@@ -72,7 +71,7 @@
 
   {#if filteredProduce.length === 0}
     <div class="empty-state">
-      {#if currentFilter === 'garden'}
+      {#if ui.gridFilter === 'garden'}
         <p>You haven't planted anything yet!</p>
       {:else}
         <p>No produce recorded for this filter in {MONTHS[monthContext.month - 1]}.</p>
