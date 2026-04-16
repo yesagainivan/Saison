@@ -34,14 +34,14 @@
 }
 
 [data-season="summer"] {
-  --bg:        #F4F0E6;
-  --bg-card:   #EBE4D4;
-  --bg-surface:#F9F5EC;
-  --accent:    #B87858;
-  --text:      #342820;
-  --text-muted:#7A6450;
-  --highlight: #D8A870;
-  --border:    #D4C0A0;
+  --bg:        #F9F5E6;
+  --bg-card:   #EEE6D0;
+  --bg-surface:#FBFAF2;
+  --accent:    #A68A40;
+  --text:      #352F20;
+  --text-muted:#7A7050;
+  --highlight: #EEDD99;
+  --border:    #DCD0A0;
 }
 
 [data-season="autumn"] {
