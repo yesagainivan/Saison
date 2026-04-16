@@ -2,6 +2,7 @@
 	import { getContext } from 'svelte';
 	import ProduceCard from '$lib/components/ProduceCard.svelte';
 	import SeasonWheel from '$lib/components/SeasonWheel.svelte';
+	import FlankIllustration from '$lib/components/FlankIllustration.svelte';
 	import { SEASON_LABELS, MONTHS, MONTHS_FR } from '$lib/types';
 	import type { Produce } from '$lib/types';
 	import type { PageData } from './$types';
@@ -57,9 +58,19 @@
 	<title>Saison - {currentMonthName}</title>
 </svelte:head>
 
-<section class="wheel-section">
-	<div class="season-label">{currentSeasonName}</div>
-	<SeasonWheel bind:month={monthContext.month} />
+<section class="hero-section">
+	<div class="flank-container left">
+		<FlankIllustration side="left" />
+	</div>
+	
+	<div class="wheel-section">
+		<div class="season-label">{currentSeasonName}</div>
+		<SeasonWheel bind:month={monthContext.month} />
+	</div>
+
+	<div class="flank-container right">
+		<FlankIllustration side="right" />
+	</div>
 </section>
 
 <section class="grid-section">
@@ -105,11 +116,38 @@
 </section>
 
 <style>
+	.hero-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		padding: 2rem 0;
+		max-width: 900px; /* Constrain the flanking illustrations nicely */
+		margin: 0 auto;
+	}
+
+	.flank-container {
+		display: none; /* Safely hide on smaller mobile screens */
+	}
+
+	@media (min-width: 768px) {
+		.flank-container {
+			display: flex;
+			flex: 1;
+		}
+		.flank-container.left {
+			justify-content: flex-end;
+		}
+		.flank-container.right {
+			justify-content: flex-start;
+		}
+	}
+
 	.wheel-section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 2rem 0;
+		flex-shrink: 0;
 	}
 
 	.season-label {
