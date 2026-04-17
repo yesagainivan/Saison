@@ -149,10 +149,10 @@
 	@keyframes sway-x {
 		0%,
 		100% {
-			margin-left: 0;
+			transform: translateX(0);
 		}
 		50% {
-			margin-left: 4vw;
+			transform: translateX(4vw);
 		}
 	}
 
@@ -163,7 +163,7 @@
 		animation:
 			winter-fall 30s linear infinite,
 			sway-x 8s ease-in-out infinite;
-		will-change: transform;
+		/* will-change omitted — animations are slow enough the browser handles these fine */
 	}
 	.f-1 {
 		left: 10%;
@@ -188,7 +188,6 @@
 		animation:
 			winter-fall 25s linear infinite,
 			sway-x 6s ease-in-out infinite;
-		will-change: transform;
 	}
 	.d-1 {
 		left: 30%;
@@ -231,10 +230,10 @@
 	@keyframes gentle-sway {
 		0%,
 		100% {
-			margin-left: -2vw;
+			transform: translateX(-2vw);
 		}
 		50% {
-			margin-left: 2vw;
+			transform: translateX(2vw);
 		}
 	}
 
@@ -245,7 +244,6 @@
 		animation:
 			spring-rise 25s linear infinite,
 			gentle-sway 9s ease-in-out infinite;
-		will-change: transform;
 	}
 	.p-1 {
 		left: 15%;
@@ -270,7 +268,6 @@
 		animation:
 			spring-rise 22s linear infinite,
 			gentle-sway 10s ease-in-out infinite;
-		will-change: transform;
 	}
 	.b-1 {
 		left: 45%;
@@ -296,7 +293,6 @@
 		animation:
 			spring-rise 30s linear infinite,
 			gentle-sway 6s ease-in-out infinite;
-		will-change: transform;
 		opacity: 0.8;
 	}
 	.pol-1 {
@@ -350,15 +346,27 @@
 		}
 	}
 
+	/*
+	 * Summer flares: blur is on a STATIC child so it is painted once.
+	 * Only opacity + transform animate on the outer shell — compositor-only.
+	 */
 	.summer-flare {
 		position: absolute;
 		border-radius: 50%;
-		background-color: var(--accent);
-		filter: blur(40px); /* Heavy blur for a glowing/flare effect */
+		/* Animate only compositor-friendly properties */
 		animation:
 			summer-flare-pulse 10s ease-in-out infinite alternate,
 			summer-drift 20s ease-in-out infinite alternate;
 		will-change: transform, opacity;
+	}
+	/* The blurred blob lives here — static, never animated */
+	.summer-flare::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background-color: var(--accent);
+		filter: blur(40px);
 	}
 	.s-1 {
 		top: 10%;
@@ -404,10 +412,9 @@
 		height: 5px;
 		background-color: var(--accent);
 		border-radius: 50%;
-		/* Drift sideways via transform, sway via margin, pulse via opacity to prevent CSS conflicts */
+		/* All three animations use only transform/opacity — compositor-thread safe */
 		animation:
 			summer-drift-x 35s linear infinite,
-			gentle-sway 8s ease-in-out infinite alternate,
 			summer-dust-fade 4s ease-in-out infinite alternate;
 		will-change: transform, opacity;
 		box-shadow: 0 0 10px 2px var(--accent);
@@ -452,21 +459,19 @@
 	}
 
 	/* ======== AUTUMN ======== */
+	/* Single keyframe handles both fall + sway — no transform conflict */
 	@keyframes autumn-fall {
 		0% {
-			transform: translate3d(0, -10vh, 0) rotate(-20deg);
+			transform: translate3d(-4vw, -10vh, 0) rotate(-20deg);
+		}
+		33% {
+			transform: translate3d(4vw, 33vh, 0) rotate(60deg);
+		}
+		66% {
+			transform: translate3d(-3vw, 77vh, 0) rotate(110deg);
 		}
 		100% {
-			transform: translate3d(0, 120vh, 0) rotate(140deg);
-		}
-	}
-	@keyframes leaf-sway {
-		0%,
-		100% {
-			margin-left: -5vw;
-		}
-		50% {
-			margin-left: 5vw;
+			transform: translate3d(4vw, 120vh, 0) rotate(160deg);
 		}
 	}
 
@@ -474,10 +479,7 @@
 		position: absolute;
 		width: 40px;
 		height: 40px;
-		animation:
-			autumn-fall 20s linear infinite,
-			leaf-sway 6s ease-in-out infinite;
-		will-change: transform;
+		animation: autumn-fall 20s linear infinite;
 		transform-origin: center;
 	}
 	.a-1 {

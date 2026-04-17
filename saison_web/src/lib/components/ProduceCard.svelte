@@ -8,6 +8,18 @@
 
 	let { produce, index = 0 }: { produce: Produce; index?: number } = $props();
 
+	// Only animate on first mount, not on every re-filter.
+	// Svelte re-uses keyed elements (produce.id), so this flag stays false
+	// after the first render — no repeated fly animations on month switch.
+	let hasMounted = $state(false);
+	$effect(() => {
+		// Run once after DOM insertion
+		const id = requestAnimationFrame(() => {
+			hasMounted = true;
+		});
+		return () => cancelAnimationFrame(id);
+	});
+
 	// Parse JSON color string safely
 	let swatches = $derived.by(() => {
 		if (!produce.colors) return ['#cccccc'];
@@ -23,7 +35,7 @@
 	href={resolve(`/produce/${produce.id}`)}
 	class="produce-card"
 	class:featured={produce.featured}
-	in:fly={{ y: 12, duration: 320, delay: Math.min(index, 6) * 35, easing: cubicOut }}
+	in:fly={{ y: 12, duration: 280, delay: Math.min(index, 3) * 30, easing: cubicOut }}
 >
 	<!-- Vertical color accent strip (desktop) / left border (mobile) -->
 	<div class="swatch-strip" style="background: {swatches[0]}"></div>
