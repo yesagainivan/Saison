@@ -138,21 +138,19 @@
 	}
 
 	/* ======== WINTER ======== */
+	/* Sway merged in — no transform conflict */
 	@keyframes winter-fall {
 		0% {
-			transform: translateY(-5vh) rotate(0deg);
+			transform: translate3d(-3vw, -5vh, 0) rotate(0deg);
+		}
+		33% {
+			transform: translate3d(3vw, 35vh, 0) rotate(120deg);
+		}
+		66% {
+			transform: translate3d(-2vw, 75vh, 0) rotate(240deg);
 		}
 		100% {
-			transform: translateY(120vh) rotate(360deg);
-		}
-	}
-	@keyframes sway-x {
-		0%,
-		100% {
-			transform: translateX(0);
-		}
-		50% {
-			transform: translateX(4vw);
+			transform: translate3d(3vw, 120vh, 0) rotate(360deg);
 		}
 	}
 
@@ -160,23 +158,18 @@
 		position: absolute;
 		width: 48px;
 		height: 48px;
-		animation:
-			winter-fall 30s linear infinite,
-			sway-x 8s ease-in-out infinite;
-		/* will-change omitted — animations are slow enough the browser handles these fine */
+		animation: winter-fall 30s linear infinite;
 	}
 	.f-1 {
 		left: 10%;
 		top: -10%;
-		animation-duration: 40s, 12s;
+		animation-duration: 40s;
 	}
 	.f-2 {
 		left: 80%;
 		top: -20%;
-		animation-duration: 35s, 10s;
-		animation-delay:
-			-10s,
-			-3s;
+		animation-duration: 35s;
+		animation-delay: -10s;
 		width: 64px;
 		height: 64px;
 	}
@@ -185,55 +178,47 @@
 		position: absolute;
 		background-color: var(--accent);
 		border-radius: 50%;
-		animation:
-			winter-fall 25s linear infinite,
-			sway-x 6s ease-in-out infinite;
+		animation: winter-fall 25s linear infinite;
 	}
 	.d-1 {
 		left: 30%;
 		top: -5%;
 		width: 6px;
 		height: 6px;
-		animation-duration: 20s, 7s;
+		animation-duration: 20s;
 	}
 	.d-2 {
 		left: 70%;
 		top: -15%;
 		width: 4px;
 		height: 4px;
-		animation-duration: 28s, 9s;
-		animation-delay:
-			-5s,
-			-2s;
+		animation-duration: 28s;
+		animation-delay: -5s;
 	}
 	.d-3 {
 		left: 50%;
 		top: -20%;
 		width: 8px;
 		height: 8px;
-		animation-duration: 22s, 8s;
-		animation-delay:
-			-15s,
-			-4s;
+		animation-duration: 22s;
+		animation-delay: -15s;
 		opacity: 0.5;
 	}
 
 	/* ======== SPRING ======== */
+	/* Sway merged in — no transform conflict */
 	@keyframes spring-rise {
 		0% {
-			transform: translateY(10vh) rotate(0deg) scale(0.8);
+			transform: translate3d(-2vw, 10vh, 0) rotate(0deg) scale(0.8);
+		}
+		33% {
+			transform: translate3d(2vw, -30vh, 0) rotate(60deg) scale(0.9);
+		}
+		66% {
+			transform: translate3d(-1.5vw, -80vh, 0) rotate(130deg) scale(1);
 		}
 		100% {
-			transform: translateY(-120vh) rotate(180deg) scale(1);
-		}
-	}
-	@keyframes gentle-sway {
-		0%,
-		100% {
-			transform: translateX(-2vw);
-		}
-		50% {
-			transform: translateX(2vw);
+			transform: translate3d(2vw, -120vh, 0) rotate(180deg) scale(1);
 		}
 	}
 
@@ -241,22 +226,18 @@
 		position: absolute;
 		width: 48px;
 		height: 48px;
-		animation:
-			spring-rise 25s linear infinite,
-			gentle-sway 9s ease-in-out infinite;
+		animation: spring-rise 25s linear infinite;
 	}
 	.p-1 {
 		left: 15%;
 		bottom: -10%;
-		animation-duration: 25s, 8s;
+		animation-duration: 25s;
 	}
 	.p-2 {
 		left: 85%;
 		bottom: -5%;
-		animation-duration: 30s, 11s;
-		animation-delay:
-			-10s,
-			-5s;
+		animation-duration: 30s;
+		animation-delay: -10s;
 		width: 64px;
 		height: 64px;
 	}
@@ -265,55 +246,49 @@
 		position: absolute;
 		width: 56px;
 		height: 56px;
-		animation:
-			spring-rise 22s linear infinite,
-			gentle-sway 10s ease-in-out infinite;
+		animation: spring-rise 22s linear infinite;
 	}
 	.b-1 {
 		left: 45%;
 		bottom: -15%;
 		transform-origin: center;
-		animation-duration: 28s, 7s;
+		animation-duration: 28s;
 	}
 	.b-2 {
 		left: 70%;
 		bottom: -20%;
 		width: 40px;
 		height: 40px;
-		animation-duration: 35s, 9s;
-		animation-delay:
-			-15s,
-			-4s;
+		animation-duration: 35s;
+		animation-delay: -15s;
 	}
 
 	.spring-pollen {
 		position: absolute;
 		background-color: var(--accent);
 		border-radius: 50%;
-		animation:
-			spring-rise 30s linear infinite,
-			gentle-sway 6s ease-in-out infinite;
+		animation: spring-rise 30s linear infinite;
 		opacity: 0.8;
 	}
 	.pol-1 {
 		left: 35%;
 		width: 6px;
 		height: 6px;
-		animation-duration: 20s, 6s;
+		animation-duration: 20s;
 		animation-delay: -5s;
 	}
 	.pol-2 {
 		left: 60%;
 		width: 5px;
 		height: 5px;
-		animation-duration: 28s, 8s;
+		animation-duration: 28s;
 		animation-delay: -12s;
 	}
 	.pol-3 {
 		left: 85%;
 		width: 8px;
 		height: 8px;
-		animation-duration: 18s, 7s;
+		animation-duration: 18s;
 		animation-delay: -2s;
 	}
 
