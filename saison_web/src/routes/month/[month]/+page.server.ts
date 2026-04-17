@@ -1,4 +1,5 @@
 import { redirect } from '@sveltejs/kit';
+import { base } from '$app/paths';
 import type { PageServerLoad, EntryGenerator } from './$types';
 
 export const entries: EntryGenerator = () => {
@@ -8,7 +9,7 @@ export const entries: EntryGenerator = () => {
 export const load: PageServerLoad = ({ params }) => {
 	const m = parseInt(params.month);
 	if (!isNaN(m) && m >= 1 && m <= 12) {
-		throw redirect(302, `/?month=${m}`);
+		throw redirect(302, `${base}/?month=${m}`);
 	}
-	throw redirect(302, '/');
+	throw redirect(302, `${base}/`);
 };
