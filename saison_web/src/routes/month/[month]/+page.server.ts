@@ -1,5 +1,9 @@
 import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad, EntryGenerator } from './$types';
+
+export const entries: EntryGenerator = () => {
+	return Array.from({ length: 12 }, (_, i) => ({ month: String(i + 1) }));
+};
 
 export const load: PageServerLoad = ({ params }) => {
 	const m = parseInt(params.month);

@@ -2,6 +2,8 @@ import type { LayoutServerLoad } from './$types';
 import { db } from '$lib/db';
 import type { Produce } from '$lib/types';
 
+export const prerender = true;
+
 export const load: LayoutServerLoad = () => {
 	// A lightweight query just for the global search index.
 	// We don't need descriptions or companions here to save memory.

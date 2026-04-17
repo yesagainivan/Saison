@@ -9,6 +9,7 @@
 	import SearchPalette from '$lib/components/SearchPalette.svelte';
 	import BackgroundEffects from '$lib/components/BackgroundEffects.svelte';
 	import { searchStore } from '$lib/stores/search.svelte';
+	import { browser } from '$app/environment';
 
 	let { data, children } = $props();
 
@@ -19,7 +20,7 @@
 		}
 	});
 
-	let initialMonth = Number(page.url.searchParams.get('month')) || new Date().getMonth() + 1;
+	let initialMonth = (browser && Number(page.url.searchParams.get('month'))) || new Date().getMonth() + 1;
 	let currentMonth = $state(initialMonth);
 
 	// Sync back to URL or just let it stay local, local is fine for the wheel since it's an app-like experience
