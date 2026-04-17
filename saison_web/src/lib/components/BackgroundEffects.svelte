@@ -31,7 +31,6 @@
 			<path
 				d="M12,3 C17,3 21,8 20,13 C19,16 16,19 12,21 C8,19 5,16 4,13 C3,8 7,3 12,3 Z"
 				fill="currentColor"
-				opacity="0.8"
 			/>
 		</svg>
 		<svg class="spring-petal p-2" viewBox="0 0 24 24">
@@ -42,6 +41,22 @@
 				stroke-width="1"
 			/>
 		</svg>
+
+		<!-- Prominent Minimalist Spring Blossoms -->
+		<svg class="spring-blossom b-1" viewBox="0 0 24 24">
+			<path d="M12 2 Q15 7 12 12 Q9 7 12 2 Z" fill="currentColor" />
+			<path d="M12 22 Q15 17 12 12 Q9 17 12 22 Z" fill="currentColor" />
+			<path d="M2 12 Q7 15 12 12 Q7 9 2 12 Z" fill="currentColor" />
+			<path d="M22 12 Q17 15 12 12 Q17 9 22 12 Z" fill="currentColor" />
+			<circle cx="12" cy="12" r="1.5" fill="var(--bg-surface)" />
+		</svg>
+		<svg class="spring-blossom b-2" viewBox="0 0 24 24">
+			<path d="M12 2 Q15 7 12 12 Q9 7 12 2 Z" fill="currentColor" />
+			<path d="M12 22 Q15 17 12 12 Q9 17 12 22 Z" fill="currentColor" />
+			<path d="M2 12 Q7 15 12 12 Q7 9 2 12 Z" fill="currentColor" />
+			<path d="M22 12 Q17 15 12 12 Q17 9 22 12 Z" fill="currentColor" />
+		</svg>
+
 		<div class="spring-pollen pol-1"></div>
 		<div class="spring-pollen pol-2"></div>
 		<div class="spring-pollen pol-3"></div>
@@ -49,11 +64,16 @@
 
 	<!-- Summer Effects -->
 	<div class="season-layer" class:active={season === 'summer'}>
-		<!-- Large, blurred dust motes / sun flares pulsing -->
+		<!-- Deep, subtle heat flares -->
 		<div class="summer-flare s-1"></div>
 		<div class="summer-flare s-2"></div>
 		<div class="summer-flare s-3"></div>
-		<div class="summer-flare s-4"></div>
+
+		<!-- Sideways drifting glowing elements (fireflies / dust motes) -->
+		<div class="summer-dust sd-1"></div>
+		<div class="summer-dust sd-2"></div>
+		<div class="summer-dust sd-3"></div>
+		<div class="summer-dust sd-4"></div>
 	</div>
 
 	<!-- Autumn Effects -->
@@ -123,7 +143,7 @@
 			transform: translateY(-5vh) rotate(0deg);
 		}
 		100% {
-			transform: translateY(105vh) rotate(360deg);
+			transform: translateY(120vh) rotate(360deg);
 		}
 	}
 	@keyframes sway-x {
@@ -140,7 +160,9 @@
 		position: absolute;
 		width: 48px;
 		height: 48px;
-		animation: winter-fall 30s linear infinite, sway-x 8s ease-in-out infinite;
+		animation:
+			winter-fall 30s linear infinite,
+			sway-x 8s ease-in-out infinite;
 		will-change: transform;
 	}
 	.f-1 {
@@ -152,7 +174,9 @@
 		left: 80%;
 		top: -20%;
 		animation-duration: 35s, 10s;
-		animation-delay: -10s, -3s;
+		animation-delay:
+			-10s,
+			-3s;
 		width: 64px;
 		height: 64px;
 	}
@@ -161,7 +185,9 @@
 		position: absolute;
 		background-color: var(--accent);
 		border-radius: 50%;
-		animation: winter-fall 25s linear infinite, sway-x 6s ease-in-out infinite;
+		animation:
+			winter-fall 25s linear infinite,
+			sway-x 6s ease-in-out infinite;
 		will-change: transform;
 	}
 	.d-1 {
@@ -177,7 +203,9 @@
 		width: 4px;
 		height: 4px;
 		animation-duration: 28s, 9s;
-		animation-delay: -5s, -2s;
+		animation-delay:
+			-5s,
+			-2s;
 	}
 	.d-3 {
 		left: 50%;
@@ -185,21 +213,24 @@
 		width: 8px;
 		height: 8px;
 		animation-duration: 22s, 8s;
-		animation-delay: -15s, -4s;
+		animation-delay:
+			-15s,
+			-4s;
 		opacity: 0.5;
 	}
 
 	/* ======== SPRING ======== */
 	@keyframes spring-rise {
 		0% {
-			transform: translateY(105vh) rotate(0deg) scale(0.8);
+			transform: translateY(10vh) rotate(0deg) scale(0.8);
 		}
 		100% {
-			transform: translateY(-15vh) rotate(180deg) scale(1);
+			transform: translateY(-120vh) rotate(180deg) scale(1);
 		}
 	}
 	@keyframes gentle-sway {
-		0%, 100% {
+		0%,
+		100% {
 			margin-left: -2vw;
 		}
 		50% {
@@ -209,9 +240,11 @@
 
 	.spring-petal {
 		position: absolute;
-		width: 32px;
-		height: 32px;
-		animation: spring-rise 25s linear infinite, gentle-sway 9s ease-in-out infinite;
+		width: 48px;
+		height: 48px;
+		animation:
+			spring-rise 25s linear infinite,
+			gentle-sway 9s ease-in-out infinite;
 		will-change: transform;
 	}
 	.p-1 {
@@ -220,34 +253,101 @@
 		animation-duration: 25s, 8s;
 	}
 	.p-2 {
-		left: 75%;
+		left: 85%;
 		bottom: -5%;
 		animation-duration: 30s, 11s;
-		animation-delay: -10s, -5s;
-		width: 44px;
-		height: 44px;
+		animation-delay:
+			-10s,
+			-5s;
+		width: 64px;
+		height: 64px;
+	}
+
+	.spring-blossom {
+		position: absolute;
+		width: 56px;
+		height: 56px;
+		animation:
+			spring-rise 22s linear infinite,
+			gentle-sway 10s ease-in-out infinite;
+		will-change: transform;
+	}
+	.b-1 {
+		left: 45%;
+		bottom: -15%;
+		transform-origin: center;
+		animation-duration: 28s, 7s;
+	}
+	.b-2 {
+		left: 70%;
+		bottom: -20%;
+		width: 40px;
+		height: 40px;
+		animation-duration: 35s, 9s;
+		animation-delay:
+			-15s,
+			-4s;
 	}
 
 	.spring-pollen {
 		position: absolute;
 		background-color: var(--accent);
 		border-radius: 50%;
-		animation: spring-rise 35s linear infinite;
+		animation:
+			spring-rise 30s linear infinite,
+			gentle-sway 6s ease-in-out infinite;
 		will-change: transform;
-		opacity: 0.6;
+		opacity: 0.8;
 	}
-	.pol-1 { left: 40%; width: 5px; height: 5px; animation-duration: 20s; animation-delay: -5s; }
-	.pol-2 { left: 60%; width: 4px; height: 4px; animation-duration: 28s; animation-delay: -12s; }
-	.pol-3 { left: 85%; width: 7px; height: 7px; animation-duration: 18s; animation-delay: -2s; }
+	.pol-1 {
+		left: 35%;
+		width: 6px;
+		height: 6px;
+		animation-duration: 20s, 6s;
+		animation-delay: -5s;
+	}
+	.pol-2 {
+		left: 60%;
+		width: 5px;
+		height: 5px;
+		animation-duration: 28s, 8s;
+		animation-delay: -12s;
+	}
+	.pol-3 {
+		left: 85%;
+		width: 8px;
+		height: 8px;
+		animation-duration: 18s, 7s;
+		animation-delay: -2s;
+	}
 
 	/* ======== SUMMER ======== */
-	@keyframes summer-pulse {
-		0%, 100% { transform: scale(1); opacity: 0.3; }
-		50% { transform: scale(1.1); opacity: 0.8; }
+	@keyframes summer-flare-pulse {
+		0%,
+		100% {
+			transform: scale(1);
+			opacity: 0.05;
+		}
+		50% {
+			transform: scale(1.1);
+			opacity: 0.25;
+		} /* Moderated opacity to avoid washing out UI */
 	}
 	@keyframes summer-drift {
-		0% { transform: translate(0, 0); }
-		100% { transform: translate(10vw, -10vh); }
+		0% {
+			transform: translate(0, 0);
+		}
+		100% {
+			transform: translate(10vw, -10vh);
+		}
+	}
+	@keyframes summer-drift-x {
+		0% {
+			transform: translate3d(0, 0, 0);
+		}
+		100% {
+			transform: translate3d(130vw, -15vh, 0);
+		}
 	}
 
 	.summer-flare {
@@ -255,41 +355,128 @@
 		border-radius: 50%;
 		background-color: var(--accent);
 		filter: blur(40px); /* Heavy blur for a glowing/flare effect */
-		animation: summer-pulse 10s ease-in-out infinite alternate, summer-drift 20s ease-in-out infinite alternate;
+		animation:
+			summer-flare-pulse 10s ease-in-out infinite alternate,
+			summer-drift 20s ease-in-out infinite alternate;
 		will-change: transform, opacity;
 	}
 	.s-1 {
-		top: 10%; right: 10%; width: 30vw; height: 30vw;
+		top: 10%;
+		right: 10%;
+		width: 30vw;
+		height: 30vw;
 		animation-duration: 12s, 30s;
 	}
 	.s-2 {
-		bottom: 10%; left: 5%; width: 20vw; height: 20vw;
-		animation-duration: 9s, 25s; animation-delay: -3s, -5s;
+		bottom: 10%;
+		left: 5%;
+		width: 20vw;
+		height: 20vw;
+		animation-duration: 9s, 25s;
+		animation-delay:
+			-3s,
+			-5s;
 	}
 	.s-3 {
-		top: 40%; left: 40%; width: 15vw; height: 15vw;
-		animation-duration: 15s, 35s; animation-delay: -7s, -12s;
+		top: 40%;
+		left: 40%;
+		width: 15vw;
+		height: 15vw;
+		animation-duration: 15s, 35s;
+		animation-delay:
+			-7s,
+			-12s;
 	}
-	.s-4 {
-		top: 70%; right: 20%; width: 25vw; height: 25vw;
-		animation-duration: 14s, 28s; animation-delay: -10s, -8s;
+
+	@keyframes summer-dust-fade {
+		0%,
+		100% {
+			opacity: 0.1;
+		}
+		50% {
+			opacity: 0.8;
+		}
+	}
+
+	.summer-dust {
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		background-color: var(--accent);
+		border-radius: 50%;
+		/* Drift sideways via transform, sway via margin, pulse via opacity to prevent CSS conflicts */
+		animation:
+			summer-drift-x 35s linear infinite,
+			gentle-sway 8s ease-in-out infinite alternate,
+			summer-dust-fade 4s ease-in-out infinite alternate;
+		will-change: transform, opacity;
+		box-shadow: 0 0 10px 2px var(--accent);
+	}
+	.sd-1 {
+		top: 30%;
+		left: -10vw;
+		animation-duration: 35s, 10s, 3s;
+	}
+	.sd-2 {
+		top: 60%;
+		left: -10vw;
+		animation-duration: 40s, 12s, 4s;
+		animation-delay:
+			-10s,
+			-3s,
+			-1s;
+		width: 3px;
+		height: 3px;
+	}
+	.sd-3 {
+		top: 80%;
+		left: -10vw;
+		animation-duration: 25s, 8s, 5s;
+		animation-delay:
+			-5s,
+			-7s,
+			-2s;
+		width: 6px;
+		height: 6px;
+	}
+	.sd-4 {
+		top: 20%;
+		left: -10vw;
+		animation-duration: 30s, 9s, 3.5s;
+		animation-delay:
+			-20s,
+			-2s,
+			0s;
+		width: 4px;
+		height: 4px;
 	}
 
 	/* ======== AUTUMN ======== */
 	@keyframes autumn-fall {
-		0% { transform: translate3d(0, -10vh, 0) rotate(-20deg); }
-		100% { transform: translate3d(0, 110vh, 0) rotate(140deg); }
+		0% {
+			transform: translate3d(0, -10vh, 0) rotate(-20deg);
+		}
+		100% {
+			transform: translate3d(0, 120vh, 0) rotate(140deg);
+		}
 	}
 	@keyframes leaf-sway {
-		0%, 100% { margin-left: -5vw; }
-		50% { margin-left: 5vw; }
+		0%,
+		100% {
+			margin-left: -5vw;
+		}
+		50% {
+			margin-left: 5vw;
+		}
 	}
 
 	.autumn-leaf {
 		position: absolute;
 		width: 40px;
 		height: 40px;
-		animation: autumn-fall 20s linear infinite, leaf-sway 6s ease-in-out infinite;
+		animation:
+			autumn-fall 20s linear infinite,
+			leaf-sway 6s ease-in-out infinite;
 		will-change: transform;
 		transform-origin: center;
 	}
@@ -301,7 +488,9 @@
 		left: 60%;
 		top: -15%;
 		animation-duration: 22s, 7s;
-		animation-delay: -5s, -2s;
+		animation-delay:
+			-5s,
+			-2s;
 		width: 32px;
 		height: 32px;
 	}
@@ -309,7 +498,9 @@
 		left: 85%;
 		top: -30%;
 		animation-duration: 16s, 4s;
-		animation-delay: -8s, -1s;
+		animation-delay:
+			-8s,
+			-1s;
 		width: 48px;
 		height: 48px;
 	}
