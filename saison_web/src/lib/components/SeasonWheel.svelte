@@ -130,8 +130,19 @@
 	}
 
 	.dial {
-		transform-origin: 0 0;
-		transition: transform var(--dur) cubic-bezier(0.4, 0, 0.2, 1);
+		/* transform-box: fill-box ensures transform-origin is computed in SVG geometry
+		   space (the element's own bounding box), NOT CSS layout space.
+		   Without this, iOS Safari may compute the rotation origin incorrectly
+		   for SVG <g> elements, forcing a CPU-side compositing fallback. */
+		transform-box: fill-box;
+		transform-origin: 50% 50%;
+		/* Own duration — faster and crisper than the 700ms seasonal --dur.
+		   At 30fps (Low Power Mode) a 320ms transition still gets ~10 frames,
+		   which reads as smooth. 700ms at 30fps with drops looks sluggish. */
+		transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+		/* Promote to GPU layer so the transition runs on the compositor thread,
+		   unaffected by Low Power Mode's main-thread throttling. */
+		will-change: transform;
 	}
 
 	.month-node {
