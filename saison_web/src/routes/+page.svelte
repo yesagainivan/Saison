@@ -62,7 +62,7 @@
 	<div class="flank-container left">
 		<FlankIllustration side="left" />
 	</div>
-	
+
 	<div class="wheel-section">
 		<div class="season-label">{currentSeasonName}</div>
 		<SeasonWheel bind:month={monthContext.month} />

@@ -245,13 +245,7 @@
 	}
 
 	.esc-kbd {
-		font-family:
-			ui-monospace,
-			SFMono-Regular,
-			Menlo,
-			Monaco,
-			Consolas,
-			monospace;
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 		font-size: 10px;
 		color: var(--text-muted);
 		background: var(--bg-card);

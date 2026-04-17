@@ -143,6 +143,4 @@
 		justify-content: flex-start;
 		margin-top: auto;
 	}
-
-
 </style>

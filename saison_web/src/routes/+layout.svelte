@@ -150,13 +150,7 @@
 	}
 
 	.shortcut-hint {
-		font-family:
-			ui-monospace,
-			SFMono-Regular,
-			Menlo,
-			Monaco,
-			Consolas,
-			monospace;
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 		font-size: 10px;
 		background: var(--bg-card);
 		border: 1px solid var(--border);

@@ -36,9 +36,10 @@ export const load: PageServerLoad = ({ params }) => {
 	if (allIds.length > 0) {
 		const placeholders = allIds.map(() => '?').join(', ');
 		const rows = db
-			.query<ProduceName, string[]>(
-				`SELECT id, name, name_fr FROM produce WHERE id IN (${placeholders})`
-			)
+			.query<
+				ProduceName,
+				string[]
+			>(`SELECT id, name, name_fr FROM produce WHERE id IN (${placeholders})`)
 			.all(...allIds);
 
 		for (const row of rows) {

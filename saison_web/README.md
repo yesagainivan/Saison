@@ -1,42 +1,42 @@
-# sv
+# 🌿 Saison
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+> *"Ce que la terre donne, elle le donne à son heure."*
 
-## Creating a project
+**Saison** is an open-source, seasonal produce discovery and gardening guide. It is designed to connect people to the natural rhythm of the earth — through what they eat and what they grow. It operates as a living calendar: the interface shifts with the seasons, the colours breathe with the months, and every interaction feels grounded. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🎨 Botanical Modernism
+Saison relies on a bespoke design language we call "Botanical Modernism". It merges the structural clarity of modernist design (CSS Grids, strict typographic hierarchy) with the visual warmth of classical botanical illustrations. 
+- Seasonal colour transitions drive the UI.
+- All visual elements run on highly-optimized, GPU-accelerated CSS animations.
+- 100% custom SVG illustration library.
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## 🚀 Tech Stack
+Built for extreme performance, offline-capability, and minimal overhead.
+- **Framework**: SvelteKit (Svelte 5 Runes)
+- **Runtime & Tooling**: Bun (Lightning fast package manager & test runner)
+- **Database**: SQLite (via `bun:sqlite` with local-first `.md` seed architecture)
+- **Styling**: Vanilla CSS Variables (No Tailwind, fully bespoke theming)
 
-To recreate this project with the same configuration:
+## 🛠 Getting Started
 
-```sh
-# recreate this project
-bun x sv@0.15.0 create --template minimal --types ts --add prettier eslint sveltekit-adapter="adapter:auto" --install bun .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+To get the app running locally, make sure you have [Bun](https://bun.sh/) installed.
 
 ```sh
-npm run build
+# 1. Install dependencies
+bun install
+
+# 2. Seed the database 
+# This reads the YAML frontmatter in `/data/produce` and builds your local SQLite database
+bun run db:seed
+
+# 3. Start the development server
+bun run dev --open
 ```
 
-You can preview the production build with `npm run preview`.
+## 📚 Contributing
+Saison thrives as a collaborative encyclopedia. Adding new seasonal produce, herbs, or flowers is as simple as creating a single `.md` file! We don't require you to write UI code or migrations.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Please see our [CONTRIBUTING.md](../CONTRIBUTING.md) for the exact YAML schema and guidelines on adding SVG illustrations.
+
+## 📝 License
+MIT License. Open source, forever.
