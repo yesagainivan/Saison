@@ -156,7 +156,7 @@
 			flex-direction: row;
 			align-items: stretch;
 			border-radius: 10px;
-			min-height: 72px;
+			min-height: 68px;
 		}
 
 		.produce-card:hover {
@@ -175,19 +175,21 @@
 			flex-direction: row;
 			align-items: center;
 			padding: 0.625rem 0.75rem;
-			gap: 0.625rem;
+			gap: 0;
 			flex-grow: 1;
+			min-width: 0; /* allow flex child to shrink */
 		}
 
+		/* Name column takes all available space */
 		.card-header {
 			flex: 1;
 			min-width: 0;
+			padding-right: 0.5rem;
 		}
 
 		.card-name {
 			font-size: 0.9rem;
 			line-height: 1.2;
-			/* Prevent long names overflowing */
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -195,26 +197,28 @@
 
 		.card-fr {
 			font-size: 0.65rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
-		/* Tiny illustration on the right */
+		/* Illustration pinned to the far right */
 		.card-illustration {
 			padding: 0;
 			flex-grow: 0;
 			flex-shrink: 0;
-			width: 40px;
-			height: 40px;
-			order: 1;
+			width: 44px;
+			height: 44px;
 		}
 
 		.card-illustration img {
-			max-width: 36px;
-			max-height: 36px;
+			max-width: 38px;
+			max-height: 38px;
 		}
 
-		/* Move badge below the name, within the header column */
+		/* Hide category badge on mobile — name + illustration only */
 		.card-footer {
-			margin-top: 0.25rem;
+			display: none;
 		}
 	}
 </style>
