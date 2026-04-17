@@ -1,7 +1,12 @@
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad, EntryGenerator } from './$types';
 import { db } from '$lib/db';
 import type { Produce } from '$lib/types';
 import { error } from '@sveltejs/kit';
+
+export const entries: EntryGenerator = () => {
+	const rows = db.query<{ id: string }, []>('SELECT id FROM produce').all();
+	return rows.map((row) => ({ id: row.id }));
+};
 
 interface ProduceName {
 	id: string;
