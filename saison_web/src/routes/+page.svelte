@@ -121,9 +121,15 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
-		padding: 2rem 0;
+		padding: 1rem 0 0.5rem;
 		max-width: 900px; /* Constrain the flanking illustrations nicely */
 		margin: 0 auto;
+	}
+
+	@media (min-width: 640px) {
+		.hero-section {
+			padding: 2rem 0;
+		}
 	}
 
 	.flank-container {
@@ -161,22 +167,44 @@
 	}
 
 	.grid-section {
-		padding: 0 1.5rem;
+		padding: 0 1rem;
+	}
+
+	@media (min-width: 640px) {
+		.grid-section {
+			padding: 0 1.5rem;
+		}
 	}
 
 	.grid-header {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
-		margin-bottom: 2rem;
-		padding-bottom: 1rem;
+		margin-bottom: 1.25rem;
+		padding-bottom: 0.875rem;
 		border-bottom: 1px solid var(--border);
+	}
+
+	@media (min-width: 640px) {
+		.grid-header {
+			align-items: center;
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+		}
 	}
 
 	.header-left {
 		display: flex;
-		align-items: center;
-		gap: 2rem;
+		flex-direction: column;
+		gap: 0.625rem;
+	}
+
+	@media (min-width: 640px) {
+		.header-left {
+			flex-direction: row;
+			align-items: center;
+			gap: 2rem;
+		}
 	}
 
 	.grid-title {
@@ -198,12 +226,19 @@
 		border: 1px solid var(--border);
 		color: var(--text-muted);
 		border-radius: 100px;
-		padding: 0.4rem 1rem;
-		font-size: 0.75rem;
+		padding: 0.3rem 0.7rem;
+		font-size: 0.7rem;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		cursor: pointer;
 		transition: all var(--dur) ease;
+	}
+
+	@media (min-width: 640px) {
+		.pill {
+			padding: 0.4rem 1rem;
+			font-size: 0.75rem;
+		}
 	}
 
 	.pill:hover {
@@ -246,12 +281,7 @@
 	@media (max-width: 768px) {
 		.produce-grid {
 			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	@media (max-width: 480px) {
-		.produce-grid {
-			grid-template-columns: 1fr;
+			gap: 0.75rem;
 		}
 	}
 </style>

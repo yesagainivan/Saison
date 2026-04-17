@@ -25,6 +25,7 @@
 	class:featured={produce.featured}
 	in:fly={{ y: 12, duration: 320, delay: Math.min(index, 6) * 35, easing: cubicOut }}
 >
+	<!-- Vertical color accent strip (desktop) / left border (mobile) -->
 	<div class="swatch-strip" style="background: {swatches[0]}"></div>
 
 	<div class="card-content">
@@ -89,14 +90,17 @@
 		}
 	}
 
+	/* ── Swatch strip (horizontal bar on desktop, left accent bar on mobile) ── */
 	.swatch-strip {
-		height: 6px;
+		height: 5px;
 		width: 100%;
+		flex-shrink: 0;
 		transition: background-color var(--dur) ease;
 	}
 
+	/* ── Card content ── */
 	.card-content {
-		padding: 1rem;
+		padding: 0.875rem;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
@@ -142,5 +146,75 @@
 		display: flex;
 		justify-content: flex-start;
 		margin-top: auto;
+	}
+
+	/* ─────────────────────────────────────────────────
+	   Mobile: compact horizontal card (≤ 639px)
+	   ───────────────────────────────────────────────── */
+	@media (max-width: 639px) {
+		.produce-card {
+			flex-direction: row;
+			align-items: stretch;
+			border-radius: 10px;
+			min-height: 72px;
+		}
+
+		.produce-card:hover {
+			transform: none;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+		}
+
+		/* Left accent bar instead of top strip */
+		.swatch-strip {
+			width: 4px;
+			height: auto;
+			flex-shrink: 0;
+		}
+
+		.card-content {
+			flex-direction: row;
+			align-items: center;
+			padding: 0.625rem 0.75rem;
+			gap: 0.625rem;
+			flex-grow: 1;
+		}
+
+		.card-header {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.card-name {
+			font-size: 0.9rem;
+			line-height: 1.2;
+			/* Prevent long names overflowing */
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.card-fr {
+			font-size: 0.65rem;
+		}
+
+		/* Tiny illustration on the right */
+		.card-illustration {
+			padding: 0;
+			flex-grow: 0;
+			flex-shrink: 0;
+			width: 40px;
+			height: 40px;
+			order: 1;
+		}
+
+		.card-illustration img {
+			max-width: 36px;
+			max-height: 36px;
+		}
+
+		/* Move badge below the name, within the header column */
+		.card-footer {
+			margin-top: 0.25rem;
+		}
 	}
 </style>

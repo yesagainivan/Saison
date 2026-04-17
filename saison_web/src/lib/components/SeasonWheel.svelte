@@ -111,8 +111,8 @@
 
 	.wheel-outer {
 		position: relative;
-		width: 300px;
-		height: 300px;
+		width: clamp(220px, 80vw, 300px);
+		height: clamp(220px, 80vw, 300px);
 	}
 
 	.wheel-svg {
@@ -215,7 +215,7 @@
 
 	.wcl-month {
 		font-family: 'DM Serif Display', serif;
-		font-size: 32px;
+		font-size: clamp(22px, 6vw, 32px);
 		line-height: 1;
 		color: var(--text);
 		transition: color var(--dur) ease;
